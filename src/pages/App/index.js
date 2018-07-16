@@ -18,6 +18,7 @@ import SignInPage from '../../components/SignIn';
 import PasswordForgetPage from '../../components/PasswordForget';
 import HomePage from '../../components/Home';
 import AccountPage from '../../components/Account';
+import ClassManager from '../../components/ClassManager';
 import withAuthentication from '../../components/Session/withAuthentication';
 import * as routes from '../../constants/routes';
 import './index.css';
@@ -38,12 +39,14 @@ class App extends Component {
   <Route exact path="/Chatbot" component = {Chatbot} />
   <Route exact path="/UserProfile" component = {UserProfile} />
   <Route exact path="/Admin" component = {Admin} />
+  <Route exact path="/ClassManager" component = {ClassManager} />
   <Route exact path={routes.LANDING} component={() => <LandingPage />} />
   <Route exact path={routes.SIGN_UP} component={() => <SignUpPage />} />
   <Route exact path={routes.SIGN_IN} component={() => <SignInPage />} />
   <Route exact path={routes.PASSWORD_FORGET} component={() => <PasswordForgetPage />} />
   <Route exact path={routes.HOME} component={() => <HomePage />} />
   <Route exact path={routes.ACCOUNT} component={() => <AccountPage />} />
+  <Route exact path={routes.CLASSMANAGER} component={() => <ClassManager />} />
   <Route component={Home} />
 </Switch>
 <Footer />
