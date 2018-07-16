@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Row, Container } from "../../components/Grid";
+import withAuthorization from '../../components/Session/withAuthorization';
 
 class AdminSchedule extends Component {
   render() {
@@ -25,4 +26,6 @@ class AdminSchedule extends Component {
   }
 }
 
-export default AdminSchedule;
+const authCondition = (authUser) => !!authUser;
+
+export default withAuthorization(authCondition)(AdminSchedule);

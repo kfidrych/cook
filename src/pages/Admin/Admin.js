@@ -5,6 +5,7 @@ import AdminNav from "../../components/AdminNav";
 import AdminSchedule from "../AdminSchedule";
 import UpcomingClasses from "../UpcomingClasses";
 import EditContent from "../EditContent";
+import withAuthorization from '../../components/Session/withAuthorization';
 
 class Admin extends Component {
   render() {
@@ -21,4 +22,6 @@ class Admin extends Component {
   }
 }
 
-export default Admin;
+const authCondition = (authUser) => !!authUser;
+
+export default withAuthorization(authCondition)(Admin);

@@ -2,8 +2,24 @@ import React, { Component } from "react";
 import { Col, Row, Container } from "../../components/Grid";
 import UserCard from "../../components/UserCard";
 import { UserInput } from "../../components/UserLog";
+import withAuthorization from '../../components/Session/withAuthorization';
+import { firebase, db } from '../../firebase';
 
 class UserProfile extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      users: {}
+    };
+  }
+
+  componentDidMount() {
+    db.onceGetUsers().then(snapshot =>
+      this.setState(() => ({ users: snapshot.val() }))
+    );
+  }
+
   render() {
     return (
       <div>
@@ -44,4 +60,6 @@ class UserProfile extends Component {
   }
 }
 
-export default UserProfile;
+const authCondition = (authUser) => !!authUser;
+
+export default withAuthorization(authCondition)(UserProfile);
