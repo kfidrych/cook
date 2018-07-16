@@ -19,6 +19,9 @@ const AdminNav = () =>
                     <li className={window.location.pathname === "chatbot" ? "active" : ""}>
                         <Link className="ChatbotLink" to="/Chatbot">Speak with a Representative</Link>
                     </li>
+                    <li className={window.location.pathname === "createClass" ? "active" : ""}>
+                        <Link className="createClassLink" to="/ClassManger">Class Manager</Link>
+                    </li>
                 </ul>
             </div>
         </div>

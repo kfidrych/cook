@@ -7,10 +7,10 @@ import {
 import { auth, db } from '../../firebase';
 import * as routes from '../../constants/routes';
 
-const SignUpPage = ({ history }) =>
+const ClassManagerPage = ({ history }) =>
   <div>
-    <h1>SignUp</h1>
-    <SignUpForm history={history} />
+    <h1>Class Manager</h1>
+    <CreateClassForm history={history} />
   </div>
 
 const updateByPropertyName = (propertyName, value) => () => ({
@@ -18,14 +18,13 @@ const updateByPropertyName = (propertyName, value) => () => ({
 });
 
 const INITIAL_STATE = {
-  username: '',
-  email: '',
-  passwordOne: '',
-  passwordTwo: '',
-  error: null,
+  title: "",
+  category: "",
+  description: "",
+  price: ""
 };
 
-class SignUpForm extends Component {
+class CreateClassForm extends Component {
   constructor(props) {
     super(props);
 
@@ -34,23 +33,26 @@ class SignUpForm extends Component {
 
   onSubmit = (event) => {
     const {
-      username,
-      email,
-      passwordOne,
+      title,
+      category,
+      price,
+      description
     } = this.state;
 
     const {
       history,
     } = this.props;
 
-    auth.doCreateUserWithEmailAndPassword(email, passwordOne)
-      .then(authUser => {
+    db.doCreateClass(title, category, price, description)
+      .then(createClass => {
+
+        console.log(createClass);
 
         // Create a user in your own accessible Firebase Database too
-        db.doCreateUser(authUser.user.uid, username, email)
+        db.doCreateClass(createClass.class.uid, title, description, category, price)
           .then(() => {
             this.setState(() => ({ ...INITIAL_STATE }));
-            history.push(routes.HOME);
+            history.push(routes.CLASSMANAGER);
           })
           .catch(error => {
             this.setState(updateByPropertyName('error', error));
@@ -66,65 +68,61 @@ class SignUpForm extends Component {
 
   render() {
     const {
-      username,
-      email,
-      passwordOne,
-      passwordTwo,
-      error,
+      title,
+      category,
+      price,
+      description
     } = this.state;
 
     const isInvalid =
-      passwordOne !== passwordTwo ||
-      passwordOne === '' ||
-      username === '' ||
-      email === '';
+      title === '' ||
+      category === '' ||
+      price === '' ||
+      description === '';
 
     return (
       <form onSubmit={this.onSubmit}>
         <input
-          value={username}
-          onChange={event => this.setState(updateByPropertyName('username', event.target.value))}
+          value={title}
+          onChange={event => this.setState(updateByPropertyName('title', event.target.value))}
           type="text"
-          placeholder="Full Name"
+          placeholder="Class Title"
         />
         <input
-          value={email}
-          onChange={event => this.setState(updateByPropertyName('email', event.target.value))}
+          value={category}
+          onChange={event => this.setState(updateByPropertyName('category', event.target.value))}
           type="text"
-          placeholder="Email Address"
+          placeholder="Class Category (a la carte or package)"
         />
         <input
-          value={passwordOne}
-          onChange={event => this.setState(updateByPropertyName('passwordOne', event.target.value))}
-          type="password"
-          placeholder="Password"
+          value={description}
+          onChange={event => this.setState(updateByPropertyName('description', event.target.value))}
+          type="text"
+          placeholder="Class Description"
         />
         <input
-          value={passwordTwo}
-          onChange={event => this.setState(updateByPropertyName('passwordTwo', event.target.value))}
-          type="password"
-          placeholder="Confirm Password"
+          value={price}
+          onChange={event => this.setState(updateByPropertyName('price', event.target.value))}
+          type="number"
+          placeholder="$ Price"
         />
         <button disabled={isInvalid} type="submit">
-          Sign Up
+          Create Class
         </button>
-
-        { error && <p>{error.message}</p> }
       </form>
     );
   }
 }
 
-const SignUpLink = () =>
-  <p>
-    Don't have an account?
-    {' '}
-    <Link to={routes.SIGN_UP}>Sign Up</Link>
-  </p>
+// const SignUpLink = () =>
+//   <p>
+//     Don't have an account?
+//     {' '}
+//     <Link to={routes.SIGN_UP}>Sign Up</Link>
+//   </p>
 
-export default withRouter(SignUpPage);
+export default withRouter(ClassManagerPage);
 
 export {
-  SignUpForm,
-  SignUpLink,
+  CreateClassForm
 };

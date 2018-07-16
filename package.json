@@ -45,7 +45,8 @@
     "eject": "react-scripts eject"
   },
   "author": "Katie Wang <ktwang16@mac.com (https://github.com/KTWangster)",
-  "contributors": [{
+  "contributors": [
+    {
       "name": "Julian Skodzinski",
       "url": "https://github.com/juliantsk"
     },
