@@ -1,0 +1,39 @@
+.adminText {
+  padding-top: 15px;
+  color: #424242;
+}
+
+h1 {
+  font-size: 200%;
+  text-transform: uppercase;
+  line-height: 45px;
+  margin-top: 12px;
+  color: #424242;
+}
+
+.containerBox {
+  padding: 20px 80px;
+}
+
+@media (min-width: 1200px) and (max-width: 1304px) {
+  h1 {
+    font-size: 180%;
+    margin-top: 15px;
+  }
+  .adminText {
+    font-size: 90%;
+    line-height: 22px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .adminText {
+    padding-top: 3px;
+  }
+}
+
+@media (max-width: 450px) {
+  .containerBox {
+    padding: 20px 50px 30px;
+  }
+}

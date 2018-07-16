@@ -1,0 +1,263 @@
+button,
+input {
+    font-family: inherit;
+    font-size: 100%;
+    margin: 0;
+}
+
+button,
+input {
+    line-height: normal;
+}
+
+button,
+input[type=reset],
+input[type=submit] {
+    -webkit-appearance: button;
+    cursor: pointer;
+}
+
+button[disabled],
+input[disabled] {
+    cursor: default;
+}
+
+input[type=search] {
+    -webkit-appearance: textfield;
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+}
+
+input[type=search]::-webkit-search-cancel-button,
+input[type=search]::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+
+/* body {
+    background: #f7f7f7;
+    color: #182020;
+    font-family: 'Lato', sans-serif;
+    font-size: 1.7rem;
+    font-weight: 300;
+    letter-spacing: 1.3px;
+    position: relative;
+} */
+
+input {
+    border-radius: 10px;
+}
+
+h2 {
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.wrapper {
+    max-width: 880px;
+    margin: 0 auto;
+}
+
+.button {
+    background: #fff;
+    width: 210px;
+    padding: 10px 15px;
+    text-align: center;
+    border: none;
+    font-weight: 300;
+    transition: all 0.3s;
+}
+
+.button--submit {
+    height: 46px;
+    width: 100%;
+    color: #fff;
+    background: #71d2d4;
+    font-weight: 700;
+    margin-top: 20px;
+}
+
+input:focus {
+    outline: none;
+    border: 2px solid #71d2d4;
+}
+
+form p {
+    margin: 12px 0 6px 0;
+    color: #fff;
+}
+
+form.selection__duo {
+    width: 100%;
+    margin-bottom: 16px;
+}
+
+.signIn__box {
+    max-width: 490px;
+    margin: 0 auto;
+    padding: 16px 44px 26px 44px;
+    position: relative;
+}
+
+.signIn__box .signIn__box--buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.signIn__box .signIn__box--social {
+    position: relative;
+}
+
+.signIn__box .signIn__box--social p {
+    color: #71d2d4;
+    background: #fff;
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    left: 50%;
+    top: 8px;
+    width: 45px;
+    text-align: center;
+    transform: translateX(-50%);
+}
+
+.signIn__box .signIn__box--social:after {
+    content: "";
+    background: #ebebeb;
+    position: absolute;
+    top: 30px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+}
+
+.signIn__box h2 {
+    text-align: center;
+    color: #808080;
+    padding-bottom: 5px;
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.signIn__box input {
+    padding: 10px;
+    width: 100%;
+    border: none;
+    margin: 10px 0;
+    font-weight: 300;
+    border: 2px solid #ebebeb;
+}
+
+.signIn__box .button--login {
+    background: #71d2d4;
+    bottom: 0;
+    left: 0;
+    width: 48%;
+    margin-top: 10px;
+    border: none;
+    color: #fff;
+}
+
+.signIn__box .button--login:hover {
+    background: #3abcbf;
+}
+
+.signIn__box .button--submit-bare {
+    width: 48%;
+    background: none;
+    border: 2px solid #71d2d4;
+    color: #71d2d4;
+}
+
+.signIn__box .button--submit-bare:hover {
+    background: #71d2d4;
+    color: #fff;
+}
+
+.signIn__box .button--google {
+    background: #d23f31;
+    border: none;
+    color: #fff;
+    margin-top: 29px;
+}
+
+.signIn__box .button--facebook {
+    background: #3b5998;
+    color: #fff;
+}
+
+.welcome {
+    background: #e1e7ea;
+    box-shadow: 5px 5px 8px -4px rgba(0, 0, 0, 0.15);
+    margin-top: 40px;
+}
+
+.welcome .welcome--wrapper {
+    display: flex;
+}
+
+.welcome .welcome--right {
+    width: 50%;
+    padding: 40px;
+    background-image: url("/src/assets/coffee-shop.jpg");
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+.welcome .welcome--right h2 {
+    color: #fff;
+}
+
+.welcome .welcome--right h1 {
+    font-size: 3rem;
+}
+
+.welcome .welcome--right h1:before {
+    width: 65px;
+    height: 65px;
+}
+
+.welcome .welcome--right:before {
+    content: "";
+    background: rgba(58, 86, 144, 0.8);
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.welcome .welcome--left {
+    width: 50%;
+    padding: 7px;
+    background: #fff;
+}
+
+.welcome .welcome--left p {
+    color: #808080;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.welcome h2 {
+    font-size: 4rem;
+    position: relative;
+    z-index: 1;
+    line-height: 1.3;
+    margin-top: 20px;
+    margin-bottom: 0;
+}

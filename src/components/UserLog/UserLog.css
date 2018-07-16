@@ -1,0 +1,113 @@
+/* Contact: Comment Box */
+
+textarea.form-control {
+    border: 3px solid #000000;
+    border-image-source: linear-gradient(-65deg, #5399af, #64a38d, #75ac6d);
+    border-image-slice: 2;
+    border-radius: 10px;
+    background-color: #fff;
+    color: #000000;
+    font-family: 'FontAwesome', sans-serif!important;
+    box-shadow: none;
+    margin-top: 25px;
+}
+
+textarea.form-control:focus {
+    border: 3px solid #87a097;
+    border-radius: 10px;
+    box-shadow: none;
+}
+
+
+/* Contact: User Name and Email */
+
+input.userInput {
+    height: 50px;
+    border: 3px solid #87a097;
+    border-image-source: linear-gradient(45deg, #5399af, #64a38d, #75ac6d);
+    border-image-slice: 2;
+    border-radius: 10px;
+    background-color: #fff;
+    color: #87a097;
+    font-family: 'FontAwesome', sans-serif!important;
+    box-shadow: none;
+}
+
+.userInput:focus {
+    border: 3px solid #87a097;
+    border-radius: 10px;
+    box-shadow: none;
+}
+
+form {
+    margin: 50px auto;
+}
+
+.btn-warning {
+    height: 50px;
+    border: 3px solid #87a097;
+    border-image-source: linear-gradient(45deg, #5399af, #64a38d, #75ac6d);
+    border-image-slice: 2;
+    border-radius: 30px;
+    background-color: transparent;
+    color: #87a097;
+    font-family: 'FontAwesome', sans-serif!important;
+    padding: 10px 20px;
+    margin-bottom: 120px;
+    text-transform: uppercase;
+}
+
+
+/* Login/Register: Buttons */
+
+form.login {
+    margin-top: 150px;
+}
+
+.loginBtn,
+.registerBtn {
+    margin-top: 30px;
+    /* border-radius: 30px; */
+}
+
+.loginBtn {
+    border: 3px solid #87a097;
+    border-image-source: linear-gradient(45deg, #5399af, #64a38d, #75ac6d);
+    border-image-slice: 2;
+    border-radius: 30px!important;
+    background: transparent;
+    color: #87a097;
+}
+
+.registerBtn {
+    margin-left: 0px;
+    border: 3px solid #87a097;
+    border-image-source: linear-gradient(45deg, #5399af, #64a38d, #75ac6d);
+    border-image-slice: 2;
+    border-radius: 30px!important;
+    background: transparent;
+    color: #87a097;
+}
+
+.addBtn {
+    border: 3px solid #87a097;
+    border-image-source: linear-gradient(45deg, #5399af, #64a38d, #75ac6d);
+    border-image-slice: 2;
+    border-radius: 30px!important;
+    background: transparent;
+    color: #87a097;
+    margin: 20px 0px!important;
+}
+
+.btn-warning:hover,
+.btn-warning:active,
+.btn-warning:focus,
+.btn-warning:visited {
+    border: 0px;
+    /* border-radius: 30px; */
+    background: linear-gradient(30deg, #5399af, #64a38d, #75ac6d);
+    /* background: #87a097; */
+    color: #fefbf0;
+    box-shadow: none;
+    outline: none;
+}

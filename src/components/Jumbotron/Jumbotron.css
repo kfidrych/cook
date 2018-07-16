@@ -1,0 +1,9 @@
+.jumbotron {
+  background: linear-gradient(-45deg, #5399af, #64a38d, #75ac6d);
+  width: 100%;
+  color: #ffffff;
+}
+
+.jumbotron>.caption>h1 {
+  color: #ffffff;
+}

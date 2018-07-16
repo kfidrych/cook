@@ -1,0 +1,44 @@
+.footer {
+  min-height: 150px;
+  position: relative;
+  bottom: 0;
+  background-color: #87a097;
+  opacity: 0.8;
+}
+
+.footer span {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px;
+  opacity: 0.8;
+  color: #F8F8F8;
+  text-align: center;
+}
+
+p {
+  margin: 90px auto 0 auto;
+}
+
+p>a {
+  color: #fff;
+  font-weight: 100;
+  letter-spacing: 0.1em;
+  font-family: 'Open Sans', sans-serif;
+}
+
+p>a,
+p>a:focus,
+p>a:hover {
+  background-color: transparent;
+  color: #fcf1be;
+  text-decoration: none;
+}
+
+p>a:focus,
+p>a:hover {
+  background-color: transparent;
+  color: #ffffff;
+  text-decoration: none;
+}
