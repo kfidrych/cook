@@ -6,20 +6,6 @@ import withAuthorization from '../../components/Session/withAuthorization';
 import { firebase, db } from '../../firebase';
 
 class UserProfile extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      users: {}
-    };
-  }
-
-  componentDidMount() {
-    db.onceGetUsers().then(snapshot =>
-      this.setState(() => ({ users: snapshot.val() }))
-    );
-  }
-
   render() {
     return (
       <div>
