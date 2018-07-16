@@ -12,7 +12,6 @@ import Contact from "../Contact";
 import Chatbot from "../Chatbot";
 import UserProfile from "../UserProfile";
 import Admin from "../Admin";
-import Navigation from '../../components/Navigation';
 import LandingPage from '../../components/Landing';
 import SignUpPage from '../../components/SignUp';
 import SignInPage from '../../components/SignIn';

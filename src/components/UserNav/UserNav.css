@@ -1,0 +1,185 @@
+    .navbar-inverse {
+        background: linear-gradient(-45deg, #5399af, #64a38d, #75ac6d);
+        opacity: 0.8;
+        border-radius: 0px;
+        border: 0px;
+        z-index: 1;
+    }
+    
+    .navbar {
+        margin-bottom: 0px!important;
+    }
+    
+    .navbar-nav {
+        flex-direction: row;
+    }
+    /* Logo */
+    
+    img.logoImg {
+        width: 12%;
+        height: auto;
+    }
+    
+    p#logo {
+        color: #fff;
+        font-weight: bolder;
+        letter-spacing: 0.1em;
+        font-family: 'Open Sans', sans-serif;
+        margin: 12px;
+    }
+    
+    a.logo,
+    a.logo:hover {
+        text-decoration: none;
+        color: #ffffff;
+    }
+    /* */
+    
+    .navbar-inverse .navbar-nav>li>a {
+        color: #fff;
+        font-weight: 100;
+        letter-spacing: 0.1em;
+        font-family: 'Open Sans', sans-serif;
+    }
+    
+    .navbar-inverse .navbar-nav>.active>a,
+    .navbar-inverse .navbar-nav>.active>a:focus,
+    .navbar-inverse .navbar-nav>.active>a:hover {
+        background-color: transparent;
+        color: #fcf1be;
+    }
+    
+    .navbar-inverse .navbar-nav>li>a:focus,
+    .navbar-inverse .navbar-nav>li>a:hover {
+        background-color: transparent;
+        color: #ffffff;
+    }
+    
+    .navbar-inverse .navbar-toggle {
+        border-color: #ffffff
+    }
+    
+    .navbar-inverse .navbar-toggle:focus,
+    .navbar-inverse .navbar-toggle:hover {
+        border-color: #ffffff;
+        background-color: transparent;
+    }
+    
+    .navbar-inverse .navbar-collapse,
+    .navbar-inverse .navbar-form {
+        border-color: transparent;
+    }
+    
+    @media (min-width: 320px) and (max-width: 460px) {
+        img.logoImg {
+            width: 30%;
+            height: auto;
+        }
+    }
+    
+    @media (min-width: 460px) and (max-width: 768px) {
+        img.logoImg {
+            width: 20%;
+            height: auto;
+        }
+    }
+    
+    @media (min-width: 768px) {
+        .navbar-right {
+            margin-top: -50px;
+        }
+        img.logoImg {
+            width: 16%;
+            height: auto;
+        }
+    }
+    
+    @media (min-width: 992px) {
+        .navbar-right {
+            margin-top: -50px;
+        }
+        img.logoImg {
+            width: 12%;
+            height: auto;
+        }
+    }
+    
+    @media (min-width: 1200px) {
+        .navbar-right {
+            margin-top: -55px;
+        }
+    }
+    
+    @media (min-width: 768px) {
+        a.aboutLink:after,
+        a.contactLink:after,
+        a.registerLink:after,
+        a.loginLink:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            display: inline-block;
+            height: 1em;
+            width: 100%;
+            border-bottom: 3px solid;
+            margin-top: 10px;
+            opacity: 0;
+            -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+            transition: opacity 0.35s, transform 0.35s;
+            -webkit-transform: scale(0, 1);
+            transform: scale(0, 1);
+        }
+        a.aboutLink:hover:after,
+        a.contactLink:hover:after,
+        a.registerLink:hover:after,
+        a.loginLink:hover:after {
+            opacity: 1;
+            -webkit-transform: scale(0.75);
+            transform: scale(0.75);
+        }
+    }
+    /* DROPDOWN MENU */
+    /* Dropdown Button */
+    
+    .dropbtn {
+        color: #ffffff;
+        padding: 10px 30px;
+        border: 3px solid #ffffff;
+        border-radius: 30px;
+        background-color: transparent;
+    }
+    
+    .dropdown {
+        font-weight: 100;
+        letter-spacing: 0.1em;
+        font-family: 'Open Sans', sans-serif;
+    }
+    
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #ffffff41;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px #00000033;
+        z-index: 1;
+    }
+    
+    .dropdown-content a {
+        color: #fff;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+    
+    .dropdown-content a:hover {
+        background-color: #87a097;
+    }
+    
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+    
+    .dropdown:hover .dropbtn {
+        background-color: #ffffff41;
+        border: 3px solid #ffffff41;
+    }
