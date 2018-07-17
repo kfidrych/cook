@@ -21,11 +21,13 @@ class Home extends Component {
                     <div className="col-sm-12 getStarted">
                     <h2>Browse Cooking Classes</h2>
                                 <hr className="line" />
+                                <div className="buttons">
                                 <div className="col-sm-4">
                                     <a href="/Alacarte"><button className="btn btn-primary btn-lg alacarteBtn">A la carte</button></a>
                                 </div>
                                 <div className="col-sm-4">
                                     <a href="/Classpkgs"><button className="btn btn-primary btn-lg classpkgsBtn">Packages</button></a>
+                                </div>
                                 </div>
                             </div>
                     </Col>
