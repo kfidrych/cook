@@ -7,20 +7,14 @@ const AdminNav = () =>
         <div className="container-fluid">
             <div id="navbar" className="navbar-collapse collapse">
                 <ul className="nav navbar-nav">
-                    <li className={window.location.pathname === "/about" ? "active" : ""}>
-                        <Link className="aboutLink" to="/About">About</Link>
+                    <li className={window.location.pathname === "/userManager" ? "active" : ""}>
+                        <Link className="userManagerLink" to="/UserManager">User Manager</Link>
                     </li>
-                    <li className={window.location.pathname === "register" ? "active" : ""}>
-                        <Link className="registerLink" to="/Register">Register</Link>
+                    <li className={window.location.pathname === "manageAppointments" ? "active" : ""}>
+                        <Link className="manageAppointmentsLink" to="/AppointmentManager">Appointments Manager</Link>
                     </li>
-                    <li className={window.location.pathname === "login" ? "active" : ""}>
-                        <Link className="loginLink" to="/Login">Login</Link>
-                    </li>
-                    <li className={window.location.pathname === "chatbot" ? "active" : ""}>
-                        <Link className="ChatbotLink" to="/Chatbot">Speak with a Representative</Link>
-                    </li>
-                    <li className={window.location.pathname === "createClass" ? "active" : ""}>
-                        <Link className="createClassLink" to="/ClassManger">Class Manager</Link>
+                    <li className={window.location.pathname === "manageClasses" ? "active" : ""}>
+                        <Link className="manageClassesLink" to="/ClassManager">Class Manager</Link>
                     </li>
                 </ul>
             </div>
