@@ -22,21 +22,6 @@ const NavigationAuth = () =>
     </p>
     </div>
 
-
-<div className="dropdown">
-    <button className="dropbtn">Classes</button>
-        <div class="dropdown-content">
-            <a className={window.location.pathname === "/alacarte" ? "active" : ""}>
-                <Link className="alacarteLink" to="/Alacarte">A la Carte</Link>
-            </a>
-            <a className={window.location.pathname === "/classpkgs" ? "active" : ""}>
-                <Link className="classpkgsLink" to="/ClassPkgs">Class Packages</Link>
-            </a>
-     </div>
-
-</div>
-
-
     <div id="navbar" className="navbar-collapse collapse">
         <ul className="nav navbar-nav">
             <li className={window.location.pathname === "/about" ? "active" : ""}>
@@ -62,21 +47,6 @@ const NavigationNonAuth = () =>
         <Link className="logo" to="/"><img className="logoImg img-responsive" src="assets/img/logo.png" alt="cook"/></Link>
     </p>
     </div>
-
-
-<div className="dropdown">
-    <button className="dropbtn">Classes</button>
-        <div class="dropdown-content">
-            <a className={window.location.pathname === "/alacarte" ? "active" : ""}>
-                <Link className="alacarteLink" to="/Alacarte">A la Carte</Link>
-            </a>
-            <a className={window.location.pathname === "/classpkgs" ? "active" : ""}>
-                <Link className="classpkgsLink" to="/ClassPkgs">Class Packages</Link>
-            </a>
-     </div>
-
-</div>
-
 
     <div id="navbar" className="navbar-collapse collapse">
         <ul className="nav navbar-nav">

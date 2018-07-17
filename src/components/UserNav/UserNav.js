@@ -15,6 +15,19 @@ const UserNav = () =>
                     </li>
                 </ul>
             </div>
+
+            <div className="dropdown">
+                <button className="dropbtn">Classes</button>
+                <div class="dropdown-content">
+            <a className={window.location.pathname === "/alacarte" ? "active" : ""}>
+                <Link className="alacarteLink" to="/Alacarte">A la Carte</Link>
+            </a>
+            <a className={window.location.pathname === "/classpkgs" ? "active" : ""}>
+                <Link className="classpkgsLink" to="/ClassPkgs">Class Packages</Link>
+            </a>
+     </div>
+
+</div>
         </div>
     </nav>
 
