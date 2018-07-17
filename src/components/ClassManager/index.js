@@ -11,6 +11,7 @@ const ClassManagerPage = ({ history }) =>
   <div>
     <h1>Class Manager</h1>
     <CreateClassForm history={history} />
+    <ClassListTable />
   </div>
 
 const updateByPropertyName = (propertyName, value) => () => ({
@@ -114,50 +115,55 @@ class CreateClassForm extends Component {
   }
 }
 
-class ClassList extends Component {
+class ClassListTable extends Component {
   constructor(props) {
     super(props);
 
-    this.state = { ...INITIAL_STATE };
+    this.state = { 
+      classes: {}
+    };
+  }
+
+  componentDidMount() {
+    db.onceGetClasses().then(snapshot =>
+      this.setState(() => ({ classes: snapshot.val() }))
+    );
   }
 
   render() {
+    const { classes } = this.state;
+
     return (
-      <div class="container">
-        <h2>Current Classes Offered</h2>            
-        <table class="table table-hover">
-          <thead>
-            <tr>
-              <th>Firstname</th>
-              <th>Lastname</th>
-              <th>Email</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>John</td>
-              <td>Doe</td>
-              <td>john@example.com</td>
-            </tr>
-            <tr>
-              <td>Mary</td>
-              <td>Moe</td>
-              <td>mary@example.com</td>
-            </tr>
-            <tr>
-              <td>July</td>
-              <td>Dooley</td>
-              <td>july@example.com</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    )
+      <div>
+        { !!classes && <ClassList classes={classes} /> }
+      </div>      
+    );
   }
 }
+
+const ClassList = ({ classes }) =>
+  <div class="container">
+    <h2>Current Classes Offered</h2>            
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th>Class Title</th>
+          <th>Category</th>
+          <th>Price</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        {Object.keys(classes).map(key =>
+          <tr key={key}>{classes[key].title}</tr>
+        )}
+      </tbody>
+    </table>
+  </div>
 
 export default withRouter(ClassManagerPage);
 
 export {
-  CreateClassForm
+  CreateClassForm,
+  ClassListTable
 };
