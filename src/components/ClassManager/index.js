@@ -109,12 +109,11 @@ class CreateClassForm extends Component {
           type="text"
           placeholder="Class Title"
         />
-        <input
-          value={category}
-          onChange={event => this.setState(updateByPropertyName('category', event.target.value))}
-          type="text"
-          placeholder="Class Category (a la carte or package)"
-        />
+        <select id="dropdown">
+          <option value="" disabled selected style={{display: 'none'}}>Select Category</option>
+          <option value="alaCarte">A La Carte</option>
+          <option value="package">Package</option>
+        </select>
         <input
           value={description}
           onChange={event => this.setState(updateByPropertyName('description', event.target.value))}
