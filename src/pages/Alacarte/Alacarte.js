@@ -35,7 +35,7 @@ class Alacarte extends Component {
                     </div>
                 </Col>
             </Row>
-    { !!classes && <ProductList list={classes} /> }
+    { !!classes && <ProductList classes={classes} /> }
         </Container>
     )
   }
@@ -44,9 +44,10 @@ class Alacarte extends Component {
 const ProductList = ({ classes }) =>
   <Row>
      {Object.keys(classes).map(key =>
+     if (key.category === "a la carte") {
     <MenuCard title={key.title} description={key.description} price={key.price}/>
      )}
     </Row>
-
+}
 
 export default Alacarte;
