@@ -50,7 +50,7 @@ class CreateClassForm extends Component {
         console.log(createClass);
 
         // Create a user in your own accessible Firebase Database too
-        db.doCreateClass(createClass.class.id, title, description, category, price)
+        db.doCreateClass(createClass.class.id, title, category, description, price)
           .then(() => {
             this.setState(() => ({ ...INITIAL_STATE }));
             history.push(routes.CLASSMANAGER);
@@ -132,7 +132,7 @@ class ClassListTable extends Component {
 
   render() {
     const { classes } = this.state;
-
+    
     return (
       <div>
         { !!classes && <ClassList classes={classes} /> }
@@ -141,10 +141,12 @@ class ClassListTable extends Component {
   }
 }
 
+
 const ClassList = ({ classes }) =>
-  <div class="container">
+  
+  <div className="container">
     <h2>Current Classes Offered</h2>            
-    <table class="table table-hover">
+    <table className="table table-hover">
       <thead>
         <tr>
           <th>Class Title</th>
@@ -155,7 +157,14 @@ const ClassList = ({ classes }) =>
       </thead>
       <tbody>
         {Object.keys(classes).map(key =>
-          <tr key={key}>{classes[key].title}</tr>
+          <tr>
+            <td key={key}>{classes[key].title}</td>
+            <td key={key}>{classes[key].category}</td>
+            <td key={key}>{classes[key].price}</td>
+            <td key={key}>{classes[key].description}</td>
+            <td key={key}><button type="button" className="close" onClick={() => db.doDeleteClass(key)}>Delete</button></td>
+            {/* Add Edit functionality */}
+          </tr>
         )}
       </tbody>
     </table>
