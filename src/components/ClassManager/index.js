@@ -49,7 +49,7 @@ class CreateClassForm extends Component {
         console.log(createClass);
 
         // Create a user in your own accessible Firebase Database too
-        db.doCreateClass(createClass.class.uid, title, description, category, price)
+        db.doCreateClass(createClass.class.id, title, description, category, price)
           .then(() => {
             this.setState(() => ({ ...INITIAL_STATE }));
             history.push(routes.CLASSMANAGER);
@@ -114,12 +114,47 @@ class CreateClassForm extends Component {
   }
 }
 
-// const SignUpLink = () =>
-//   <p>
-//     Don't have an account?
-//     {' '}
-//     <Link to={routes.SIGN_UP}>Sign Up</Link>
-//   </p>
+class ClassList extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = { ...INITIAL_STATE };
+  }
+
+  render() {
+    return (
+      <div class="container">
+        <h2>Current Classes Offered</h2>            
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th>Firstname</th>
+              <th>Lastname</th>
+              <th>Email</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>John</td>
+              <td>Doe</td>
+              <td>john@example.com</td>
+            </tr>
+            <tr>
+              <td>Mary</td>
+              <td>Moe</td>
+              <td>mary@example.com</td>
+            </tr>
+            <tr>
+              <td>July</td>
+              <td>Dooley</td>
+              <td>july@example.com</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    )
+  }
+}
 
 export default withRouter(ClassManagerPage);
 
