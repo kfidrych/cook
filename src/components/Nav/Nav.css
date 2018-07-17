@@ -8,6 +8,7 @@
     
     nav.navbar {
       display: flex;
+      flex-direction: row;
       justify-content: space-between;
     }
     
@@ -30,6 +31,7 @@
       display: flex;
       width: 12%;
       height: auto;
+      flex-direction: row;
     }
     
     p#logo {
@@ -166,6 +168,7 @@
       font-weight: 100;
       letter-spacing: 0.1em;
       font-family: 'Open Sans', sans-serif;
+      display: flex;
     }
     
     .dropdown-content {
