@@ -55,7 +55,7 @@ class CreateClassForm extends Component {
           .then(() => {
             this.setState(() => ({ 
               title: "",
-              ctaegory: "",
+              category: "",
               price: "",
               description: ""
               // INITIAL_STATE }));
@@ -109,10 +109,10 @@ class CreateClassForm extends Component {
           type="text"
           placeholder="Class Title"
         />
-        <select id="dropdown">
+        <select id="dropdown" value={category} onChange={event => this.setState(updateByPropertyName('category', event.target.value))}>
           <option value="" disabled selected style={{display: 'none'}}>Select Category</option>
-          <option value="alaCarte">A La Carte</option>
-          <option value="package">Package</option>
+          <option value="A La Carte">A La Carte</option>
+          <option value="Package">Package</option>
         </select>
         <input
           value={description}
