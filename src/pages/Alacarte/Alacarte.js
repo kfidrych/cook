@@ -35,19 +35,18 @@ class Alacarte extends Component {
                     </div>
                 </Col>
             </Row>
-    {/* { !!classes && <ProductList list={classes} /> } */}
+    { !!classes && <ProductList list={classes} /> }
         </Container>
     )
   }
 };
 
-// console.log(this.state.classes);
-// const ProductList = ({ classes }) =>
-//   <Row>
-//      {Object.keys(classes).map(key =>
-//     <MenuCard title={key.title} description={key.description} price={key.price}/>
-//      )}
-//     </Row>
+const ProductList = ({ classes }) =>
+  <Row>
+     {Object.keys(classes).map(key =>
+    <MenuCard title={key.title} description={key.description} price={key.price}/>
+     )}
+    </Row>
 
 
 export default Alacarte;
