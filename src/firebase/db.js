@@ -8,8 +8,8 @@ export const doCreateUser = (id, username, email) =>
     email,
   });
 
-export const doCreateClass = (id, title, description, price, category) =>
-  db.ref(`classes`).push.set({
+export const doCreateClass = (title, description, price, category) =>
+  db.ref(`classes`).push().set({
     title,
     description,
     price,
