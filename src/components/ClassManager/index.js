@@ -43,13 +43,7 @@ class CreateClassForm extends Component {
       history,
     } = this.props;
 
-    db.doCreateClass(title, category, price, description)
-      .then(createClass => {
-
-        console.log(createClass);
-
-        // Create a user in your own accessible Firebase Database too
-        db.doCreateClass(createClass.class.id, title, description, category, price)
+    db.doCreateClass(title, description, category, price)
           .then(() => {
             this.setState(() => ({ ...INITIAL_STATE }));
             history.push(routes.CLASSMANAGER);
@@ -58,10 +52,25 @@ class CreateClassForm extends Component {
             this.setState(updateByPropertyName('error', error));
           });
 
-      })
-      .catch(error => {
-        this.setState(updateByPropertyName('error', error));
-      });
+    // db.doCreateClass(title, category, price, description)
+    //   .then(createClass => {
+
+    //     console.log(createClass);
+
+    //     // Create a user in your own accessible Firebase Database too
+    //     db.doCreateClass(createClass.class.id, title, description, category, price)
+    //       .then(() => {
+    //         this.setState(() => ({ ...INITIAL_STATE }));
+    //         history.push(routes.CLASSMANAGER);
+    //       })
+    //       .catch(error => {
+    //         this.setState(updateByPropertyName('error', error));
+    //       });
+
+    //   })
+    //   .catch(error => {
+    //     this.setState(updateByPropertyName('error', error));
+    //   });
 
     event.preventDefault();
   }

@@ -9,7 +9,7 @@ export const doCreateUser = (id, username, email) =>
   });
 
 export const doCreateClass = (id, title, description, price, category) =>
-  db.ref(`classes/${id}`).set({
+  db.ref(`classes`).push.set({
     title,
     description,
     price,
