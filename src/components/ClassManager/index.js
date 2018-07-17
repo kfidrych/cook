@@ -6,6 +6,7 @@ import {
 
 import { auth, db } from '../../firebase';
 import * as routes from '../../constants/routes';
+import './ClassManager.css';
 
 const ClassManagerPage = ({ history }) =>
   <div>
@@ -50,9 +51,15 @@ class CreateClassForm extends Component {
         console.log(createClass);
 
         // Create a user in your own accessible Firebase Database too
-        db.doCreateClass(createClass.class.id, title, description, category, price)
+        db.doCreateClass(createClass.class.id, title, category, description, price)
           .then(() => {
-            this.setState(() => ({ ...INITIAL_STATE }));
+            this.setState(() => ({ 
+              title: "",
+              category: "",
+              price: "",
+              description: ""
+              // INITIAL_STATE }));
+            }));
             history.push(routes.CLASSMANAGER);
           })
           .catch(error => {
@@ -66,6 +73,19 @@ class CreateClassForm extends Component {
 
     event.preventDefault();
   }
+
+  // componentDidMount() {
+  //   db.ref("classes").on('value', (snapshot) => {
+  //     let classes = snapshot.val();
+  //     let newState = [];
+  //     for (let class in classes) {
+  //       newState.push({
+  //         id: class,
+  //         title: classes[class].title
+  //       })
+  //     }
+  //   })
+  // }
 
   render() {
     const {
@@ -89,12 +109,11 @@ class CreateClassForm extends Component {
           type="text"
           placeholder="Class Title"
         />
-        <input
-          value={category}
-          onChange={event => this.setState(updateByPropertyName('category', event.target.value))}
-          type="text"
-          placeholder="Class Category (a la carte or package)"
-        />
+        <select id="dropdown" value={category} onChange={event => this.setState(updateByPropertyName('category', event.target.value))}>
+          <option value="" disabled selected style={{display: 'none'}}>Select Category</option>
+          <option value="A La Carte">A La Carte</option>
+          <option value="Package">Package</option>
+        </select>
         <input
           value={description}
           onChange={event => this.setState(updateByPropertyName('description', event.target.value))}
@@ -132,7 +151,7 @@ class ClassListTable extends Component {
 
   render() {
     const { classes } = this.state;
-
+    
     return (
       <div>
         { !!classes && <ClassList classes={classes} /> }
@@ -141,21 +160,31 @@ class ClassListTable extends Component {
   }
 }
 
+
 const ClassList = ({ classes }) =>
-  <div class="container">
+  
+  <div className="container">
     <h2>Current Classes Offered</h2>            
-    <table class="table table-hover">
+    <table className="table table-hover">
       <thead>
         <tr>
           <th>Class Title</th>
           <th>Category</th>
           <th>Price</th>
           <th>Description</th>
+          <th>Remove Class</th>
         </tr>
       </thead>
       <tbody>
         {Object.keys(classes).map(key =>
-          <tr key={key}>{classes[key].title}</tr>
+          <tr>
+            <td key={key}>{classes[key].title}</td>
+            <td key={key}>{classes[key].category}</td>
+            <td key={key}>{classes[key].price}</td>
+            <td key={key}>{classes[key].description}</td>
+            <td key={key}><button type="button" className="close" onClick={() => db.doDeleteClass(key)}>Delete</button></td>
+            {/* Add Edit functionality */}
+          </tr>
         )}
       </tbody>
     </table>

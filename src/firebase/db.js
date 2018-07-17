@@ -8,7 +8,7 @@ export const doCreateUser = (id, username, email) =>
     email,
   });
 
-export const doCreateClass = (title, description, price, category) =>
+export const doCreateClass = (title, category, price, description) =>
   db.ref(`classes`).push().set({
     title,
     description,
@@ -19,13 +19,24 @@ export const doCreateClass = (title, description, price, category) =>
 export const onceGetClasses = () =>
   db.ref('classes').once('value');
 
-export const doCreateAppointment = (id, date) =>
-  db.ref(`appointments/${id}`).set({
+export const doCreateAppointment = (date, time, classTitle, user) =>
+  db.ref(`appointments`).push().set({
     date,
-    user: null
+    time,
+    classTitle,
+    user
   });
+
+export const onceGetAppointments = () =>
+  db.ref('appointments').once('value');
 
 export const onceGetUsers = () =>
   db.ref('users').once('value');
+
+export const doDeleteClass = (key) =>
+  db.ref('classes').child(key).remove();
+
+export const doDeleteAppointment = (key) =>
+  db.ref('appointments').child(key).remove();
 
 // Other db APIs ...
