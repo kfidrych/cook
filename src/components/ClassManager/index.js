@@ -6,6 +6,7 @@ import {
 
 import { auth, db } from '../../firebase';
 import * as routes from '../../constants/routes';
+import './ClassManager.css';
 
 const ClassManagerPage = ({ history }) =>
   <div>
@@ -52,7 +53,13 @@ class CreateClassForm extends Component {
         // Create a user in your own accessible Firebase Database too
         db.doCreateClass(createClass.class.id, title, category, description, price)
           .then(() => {
-            this.setState(() => ({ ...INITIAL_STATE }));
+            this.setState(() => ({ 
+              title: "",
+              ctaegory: "",
+              price: "",
+              description: ""
+              // INITIAL_STATE }));
+            }));
             history.push(routes.CLASSMANAGER);
           })
           .catch(error => {
@@ -66,6 +73,19 @@ class CreateClassForm extends Component {
 
     event.preventDefault();
   }
+
+  // componentDidMount() {
+  //   db.ref("classes").on('value', (snapshot) => {
+  //     let classes = snapshot.val();
+  //     let newState = [];
+  //     for (let class in classes) {
+  //       newState.push({
+  //         id: class,
+  //         title: classes[class].title
+  //       })
+  //     }
+  //   })
+  // }
 
   render() {
     const {
@@ -153,6 +173,7 @@ const ClassList = ({ classes }) =>
           <th>Category</th>
           <th>Price</th>
           <th>Description</th>
+          <th>Remove Class</th>
         </tr>
       </thead>
       <tbody>
