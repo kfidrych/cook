@@ -16,6 +16,9 @@ export const doCreateClass = (title, description, price, category) =>
     category
   });
 
+export const onceGetClasses = () =>
+  db.ref('classes').once('value');
+
 export const doCreateAppointment = (id, date) =>
   db.ref(`appointments/${id}`).set({
     date,

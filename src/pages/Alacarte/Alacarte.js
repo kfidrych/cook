@@ -1,14 +1,29 @@
 import React, { Component } from "react";
 import Jumbotron from "../../components/Jumbotron";
 import { Col, Row, Container } from "../../components/Grid";
-import ProductList from "../../components/ProductList/ProductList";
+import MenuCard from "../../components/MenuCard";
+import { db } from '../../firebase';
 import "./Alacarte.css"
 
 class Alacarte extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      classes: {}
+    };
+  }
+
+  componentDidMount() {
+    db.onceGetClasses().then(snapshot =>
+      this.setState(() => ({ classes: snapshot.val() }))
+    );
+  }
+
   render() {
-    const options = [{ title: "Homemade Pasta", description: "Appetizer" }, { title: "Homemade Sausages", description: "Appetizer" }, { title: "Charcuterie", description: "Entree" }];
+    const { classes } = this.state;
     return (
-        <Container fluid>
+      <Container fluid>
             <Row>
                 <Jumbotron />
             </Row>
@@ -20,10 +35,19 @@ class Alacarte extends Component {
                     </div>
                 </Col>
             </Row>
-            <ProductList list={options} /> 
+    {/* { !!classes && <ProductList list={classes} /> } */}
         </Container>
     )
   }
 };
+
+// console.log(this.state.classes);
+// const ProductList = ({ classes }) =>
+//   <Row>
+//      {Object.keys(classes).map(key =>
+//     <MenuCard title={key.title} description={key.description} price={key.price}/>
+//      )}
+//     </Row>
+
 
 export default Alacarte;
