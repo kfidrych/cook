@@ -43,11 +43,10 @@ class Alacarte extends Component {
 
 const ProductList = ({ classes }) =>
   <Row>
-     {Object.keys(classes).map(key =>
-     if (key.category === "a la carte") {
-    <MenuCard title={key.title} description={key.description} price={key.price}/>
+     {Object.keys(classes).map(key => 
+     (classes[key].category === "A La Carte") ? 
+     <MenuCard key={key} title={classes[key].title} description={classes[key].description} price={classes[key].price}/> : ""
      )}
     </Row>
-}
 
 export default Alacarte;

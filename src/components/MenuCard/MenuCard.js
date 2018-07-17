@@ -9,6 +9,7 @@ const MenuCard = (props) => (
       <div className="content">
       <h1>{props.title}</h1>
       <p>{props.description}</p>
+      <p>$ {props.price}</p>
       </div>
       <form action="/charge" method="POST">
     <script
