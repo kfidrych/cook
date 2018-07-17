@@ -1,12 +1,27 @@
 import React, { Component } from "react";
 import { Col, Row, Container } from "../../components/Grid";
 import Jumbotron from "../../components/Jumbotron";
-import ProductList from "../../components/ProductList";
+import MenuCard from "../../components/MenuCard";
+import { db } from '../../firebase';
 import "./ClassPkgs.css"
 
 class ClassPkgs extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      classes: {}
+    };
+  }
+
+  componentDidMount() {
+    db.onceGetClasses().then(snapshot =>
+      this.setState(() => ({ classes: snapshot.val() }))
+    );
+  }
+
   render() {
-    const options = [{ title: "Monthly", description: "The best ever!" }, { title: "Weekly", description: "Really good!" }, { title: "Ten Class Package", description: "Oh man!" }];
+    const { classes } = this.state;
     return (
       <Container fluid>
             <Row>
@@ -20,10 +35,18 @@ class ClassPkgs extends Component {
                     </div>
                 </Col>
             </Row>
-            <ProductList list={options} /> 
+    { !!classes && <ProductList classes={classes} /> }
             </Container>
     )
   }
 }
+
+const ProductList = ({ classes }) =>
+  <Row>
+     {Object.keys(classes).map(key => 
+     (classes[key].category === "Package") ? 
+     <MenuCard key={key} title={classes[key].title} description={classes[key].description} price={classes[key].price}/> : ""
+     )}
+    </Row>
 
 export default ClassPkgs;
