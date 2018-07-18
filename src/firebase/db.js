@@ -1,7 +1,6 @@
 import { db } from './firebase';
 
 // User API
-
 export const doCreateUser = (id, username, email, role) =>
   db.ref(`users/${id}`).set({
     username,
@@ -26,6 +25,26 @@ export const doCreateAppointment = (date, time, classTitle, user) =>
     time,
     classTitle,
     user
+  });
+
+export const doCreateForm = (userEmail, Q1, Q2, Q3, Q4, Q5, Q6, Q7, Q8, Q9, Q10, Q11, Q12, Q13, Q14, Q15, Q16) =>
+  db.ref(`users/${userEmail}`).set({
+    Q1,
+    Q2,
+    Q3,
+    Q4,
+    Q5,
+    Q6,
+    Q7,
+    Q8,
+    Q9,
+    Q10,
+    Q11,
+    Q12,
+    Q13,
+    Q14,
+    Q15,
+    Q16
   });
 
 export const onceGetAppointments = () =>
