@@ -32,15 +32,15 @@ class CreateAppointmentForm extends Component {
   constructor(props) {
     super(props);
 
-    this.state = { ...INITIAL_STATE };
+    this.state = {...INITIAL_STATE };
   }
 
   onSubmit = (event) => {
     const {
-        date,
-        time,
-        classTitle,
-        user
+      date,
+      time,
+      classTitle,
+      user
     } = this.state;
 
     const {
@@ -53,12 +53,12 @@ class CreateAppointmentForm extends Component {
         // Create a user in your own accessible Firebase Database too
         db.doCreateAppointment(createAppointment.appointment.id, date, classTitle, user)
           .then(() => {
-            this.setState(() => ({ 
-                date: "",
-                time: "",
-                classTitle: "",
-                user: ""
-              // INITIAL_STATE }));
+            this.setState(() => ({
+              date: "",
+              time: "",
+              classTitle: "",
+              user: ""
+                // INITIAL_STATE }));
             }));
             history.push(routes.APPOINTMENTMANAGER);
           })
@@ -89,17 +89,15 @@ class CreateAppointmentForm extends Component {
 
   render() {
     const {
-        date,
-        time,
-        classTitle,
-        user
+      date,
+      time,
+      classTitle,
+      user
     } = this.state;
 
     const isInvalid =
       date === '' ||
-      time === '' ||
-      classTitle === '' ||
-      user === '';
+      time === '';
 
     return (
       <form onSubmit={this.onSubmit}>
@@ -139,7 +137,7 @@ class AppointmentListTable extends Component {
   constructor(props) {
     super(props);
 
-    this.state = { 
+    this.state = {
       appointments: {}
     };
   }
@@ -152,18 +150,18 @@ class AppointmentListTable extends Component {
 
   render() {
     const { appointments } = this.state;
-    
+
     return (
       <div>
         { !!appointments && <AppointmentList appointments={appointments} /> }
-      </div>      
+      </div>
     );
   }
 }
 
 
 const AppointmentList = ({ appointments }) =>
-  
+
   <div className="container">
     <h2>Current Appointments</h2>            
     <table className="table table-hover">
