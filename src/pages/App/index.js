@@ -20,6 +20,7 @@ import HomePage from '../../components/Home';
 import AccountPage from '../../components/Account';
 import ClassManager from '../../components/ClassManager';
 import AppointmentsManager from '../../components/AppointmentsManager';
+import UserManager from "../../components/UserManager";
 import SignUpSurvey from '../../components/SignUpSurvey';
 import withAuthentication from '../../components/Session/withAuthentication';
 import * as routes from '../../constants/routes';
@@ -40,10 +41,11 @@ class App extends Component {
   <Route exact path="/ClassPkgs" component={ClassPkgs} />
   <Route exact path="/Chatbot" component = {Chatbot} />
   <Route exact path="/UserProfile" component = {UserProfile} />
-  <Route exact path="/Admin" component = {Admin} />
-  <Route exact path="/ClassManager" component = {ClassManager} />
-  <Route exact path="/AppointmentManager" component = {AppointmentsManager} />
+  <Route exact path="/admin/Admin" component = {Admin} />
+  <Route exact path="/admin/ClassManager" component = {ClassManager} />
+  <Route exact path="/admin/AppointmentManager" component = {AppointmentsManager} />
   <Route exact path="/SignUpSurvey" component = {SignUpSurvey} />
+  <Route exact path="/admin/UserManager" component = {UserManager} />
   <Route exact path={routes.LANDING} component={() => <LandingPage />} />
   <Route exact path={routes.SIGN_UP} component={() => <SignUpPage />} />
   <Route exact path={routes.SIGN_IN} component={() => <SignInPage />} />

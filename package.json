@@ -28,6 +28,7 @@
     "normalize.css": "^8.0.0",
     "path": "^0.12.7",
     "react": "^16.4.1",
+    "react-admin": "^2.1.2",
     "react-dom": "^16.4.1",
     "react-redux": "^5.0.7",
     "react-redux-firebase": "^2.1.6",

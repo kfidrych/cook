@@ -10,25 +10,18 @@ const AdminNav = (props) =>
                 <div id="navbar" className="navbar-collapse collapse">
                     <ul className="nav navbar-nav">
                         <li className={window.location.pathname === "/userManager" ? "active" : ""} >
-                            User Manager 
-                            {/* <Link className="userManagerLink">User Manager</Link> */}
-                            {/* {props.children} */}
+                            <Link className="userManagerLink" to="/admin/UserManager">User Manager</Link>
                         </li>
                         <li className={window.location.pathname === "manageAppointments" ? "active" : ""}>
-                            Class Manager
-                            {/* <Link className="manageAppointmentsLink" to="/AppointmentManager">Appointments Manager</Link> */}
-                            {/* {props.children} */}
+                            <Link className="manageAppointmentsLink" to="/admin/AppointmentManager">Appointments Manager</Link>
                         </li>
                         <li className={window.location.pathname === "manageClasses" ? "active" : ""}>
-                            Appointments Manager
-                            {/* <Link className="manageClassesLink" to="/ClassManager">Class Manager</Link> */}
-                            {/* {props.children} */}
+                            <Link className="manageClassesLink" to="/admin/ClassManager">Class Manager</Link>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
-        {props.children}
     </div>
 
 export default AdminNav;

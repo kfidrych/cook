@@ -7,9 +7,11 @@ import {
 import { auth, db } from '../../firebase';
 import * as routes from '../../constants/routes';
 import './UserManager.css';
+import AdminNav from "../../components/AdminNav";
 
 const UserManagerPage = ({ history }) =>
     <div>
+        <AdminNav />
         <h1>User Manager</h1>
         <UserTable />
     </div>

@@ -11,6 +11,7 @@ import AdminNav from "../../components/AdminNav";
 
 const ClassManagerPage = ({ history }) =>
   <div>
+    <AdminNav />
     <h1>Class Manager</h1>
     <CreateClassForm history={history} />
     <ClassListTable />

@@ -13,7 +13,7 @@ import withAuthorization from '../../components/Session/withAuthorization';
 
 const AppointmentManagerPage = ({ history }) =>
   <div>
-    {/* <AdminNav /> */}
+    <AdminNav />
     <h1>Appointments Manager</h1>
     <CreateAppointmentForm history={history} />
     <AppointmentListTable />
