@@ -7,6 +7,7 @@ import {
 import { auth, db } from '../../firebase';
 import * as routes from '../../constants/routes';
 import './ClassManager.css';
+import AdminNav from "../../components/AdminNav";
 
 const ClassManagerPage = ({ history }) =>
   <div>

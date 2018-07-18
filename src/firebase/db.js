@@ -57,6 +57,9 @@ export const onceGetUsers = () =>
 export const doDeleteClass = (key) =>
   db.ref('classes').child(key).remove();
 
+export const doDeleteUser = (key) =>
+  db.ref('users').child(key).remove();
+
 export const doDeleteAppointment = (key) =>
   db.ref('appointments').child(key).remove();
 
