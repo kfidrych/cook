@@ -7,11 +7,13 @@ import {
 import { auth, db } from '../../firebase';
 import * as routes from '../../constants/routes';
 import './AppointmentsManager.css';
+import AdminNav from "../../components/AdminNav";
 
 import withAuthorization from '../../components/Session/withAuthorization';
 
 const AppointmentManagerPage = ({ history }) =>
   <div>
+    {/* <AdminNav /> */}
     <h1>Appointments Manager</h1>
     <CreateAppointmentForm history={history} />
     <AppointmentListTable />
