@@ -8,7 +8,14 @@ import { auth, db } from '../../firebase';
 import * as routes from '../../constants/routes';
 import './SignUpSurvey.css';
 
-var user = auth.currentUser;
+auth.onAuthStateChanged(function(user) {
+  if (user) {
+    INITIAL_STATE.user = user;
+  } else {
+    // No user is signed in.
+    INITIAL_STATE.user = "no user";
+  }
+});
 
 const SignUpSurveyPage = ({ history }) =>
   <div>
@@ -21,123 +28,142 @@ const updateByPropertyName = (propertyName, value) => () => ({
 });
 
 const INITIAL_STATE = {
-    Q1: "",
-    Q2: "",
-    Q3: "",
-    Q4: "",
-    Q5: "",
-    Q6: "",
-    Q7: "",
-    Q8: "",
-    Q9: "",
-    Q10: "",
-    Q11: "",
-    Q12: "",
-    Q13: "",
-    Q14: "",
-    Q15: "",
-    Q16: ""
-  };
+  user: auth.getCurrentUser,
+  Q1: "",
+  Q2: "",
+  Q3: "",
+  Q4: "",
+  Q5: "",
+  Q6: "",
+  Q7: "",
+  Q8: "",
+  Q9: "",
+  Q10: "",
+  Q11: "",
+  Q12: "",
+  Q13: "",
+  Q14: "",
+  Q15: "",
+  Q16: ""
+};
 
 class SignUpSurvey extends Component {
-    constructor(props) {
-        super(props);
-    
-        this.state = { ...INITIAL_STATE };
-      }
+  constructor(props) {
+    super(props);
 
-    onSubmit = (event) => {
-        const {
-            Q1,
-            Q2,
-            Q3,
-            Q4,
-            Q5,
-            Q6,
-            Q7,
-            Q8,
-            Q9,
-            Q10,
-            Q11,
-            Q12,
-            Q13,
-            Q14,
-            Q15,
-            Q16
-        } = this.state;
-        
-        const {
-            history,
-        } = this.props;
+    this.state = {...INITIAL_STATE };
+  }
 
-        user.updateProfile({
-            signUpForm: {
-                Q1,
-                Q2,
-                Q3,
-                Q4,
-                Q5,
-                Q6,
-                Q7,
-                Q8,
-                Q9,
-                Q10,
-                Q11,
-                Q12,
-                Q13,
-                Q14,
-                Q15,
-                Q16
-            }
-        }).then(function() {
-            console.log("Update Successful");
-        }).catch(function(error) {
-            console.log(error);
-        })
+  onSubmit = (event) => {
+    const {
+      Q1,
+      Q2,
+      Q3,
+      Q4,
+      Q5,
+      Q6,
+      Q7,
+      Q8,
+      Q9,
+      Q10,
+      Q11,
+      Q12,
+      Q13,
+      Q14,
+      Q15,
+      Q16
+    } = this.state;
 
-        event.preventDefault();
-    }
+    const {
+      history,
+    } = this.props;
 
-    render() {
-        const {
-            Q1,
-            Q2,
-            Q3,
-            Q4,
-            Q5,
-            Q6,
-            Q7,
-            Q8,
-            Q9,
-            Q10,
-            Q11,
-            Q12,
-            Q13,
-            Q14,
-            Q15,
-            Q16
-        } = this.state;
+    db.doCreateForm(this.state.user.email,
+      Q1,
+      Q2,
+      Q3,
+      Q4,
+      Q5,
+      Q6,
+      Q7,
+      Q8,
+      Q9,
+      Q10,
+      Q11,
+      Q12,
+      Q13,
+      Q14,
+      Q15,
+      Q16
+    ).then(createForm => {
 
-        const isInvalid = 
-            Q1 === '' ||
-            Q2 === '' ||
-            Q3 === '' ||
-            Q4 === '' ||
-            Q5 === '' ||
-            Q6 === '' ||
-            Q7 === '' ||
-            Q8 === '' ||
-            Q9 === '' ||
-            Q10 === '' ||
-            Q11 === '' ||
-            Q12 === '' ||
-            Q13 === '' ||
-            Q14 === '' ||
-            Q15 === '' ||
-            Q16 === '';
+      db.doCreateForm(createForm.form.id, this.state.user.email,
+        Q1,
+        Q2,
+        Q3,
+        Q4,
+        Q5,
+        Q6,
+        Q7,
+        Q8,
+        Q9,
+        Q10,
+        Q11,
+        Q12,
+        Q13,
+        Q14,
+        Q15,
+        Q16
+      ).then(function() {
+        console.log("Update Successful");
+      }).catch(function(error) {
+        console.log(error);
+      });
+    });
 
-        return (
-            <form onSubmit={this.onSubmit}>
+    event.preventDefault();
+  }
+
+  render() {
+    const {
+      Q1,
+      Q2,
+      Q3,
+      Q4,
+      Q5,
+      Q6,
+      Q7,
+      Q8,
+      Q9,
+      Q10,
+      Q11,
+      Q12,
+      Q13,
+      Q14,
+      Q15,
+      Q16
+    } = this.state;
+
+    const isInvalid =
+      Q1 === '' ||
+      Q2 === '' ||
+      Q3 === '' ||
+      Q4 === '' ||
+      Q5 === '' ||
+      Q6 === '' ||
+      Q7 === '' ||
+      Q8 === '' ||
+      Q9 === '' ||
+      Q10 === '' ||
+      Q11 === '' ||
+      Q12 === '' ||
+      Q13 === '' ||
+      Q14 === '' ||
+      Q15 === '' ||
+      Q16 === '';
+
+    return (
+      <form onSubmit={this.onSubmit}>
                 <label for="Q1">How many years have you been cooking?</label>
                 <input
                     value={Q1}
@@ -250,20 +276,18 @@ class SignUpSurvey extends Component {
                     type="text"
                     placeholder=""
                 />
-                 <div>{user}</div>
                 <button disabled={isInvalid} type="submit">
                     Submit Survey
                 </button>
 
-                <div>{user}</div>
             </form>
-            );
-    }
+    );
+  }
 }
 
 export default withRouter(SignUpSurveyPage);
 
-export {SignUpSurvey};
+export { SignUpSurvey };
 
 
 
