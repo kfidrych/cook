@@ -6,3 +6,4 @@ export const HOME = '/home';
 export const ACCOUNT = '/account';
 export const CLASSMANAGER = '/admin/classmanager';
 export const APPOINTMENTMANAGER = '/admin/appointmentsmanager';
+export const SIGNUPSURVEY = '/signupsurvey';

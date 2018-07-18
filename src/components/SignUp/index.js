@@ -22,7 +22,8 @@ const INITIAL_STATE = {
   email: '',
   passwordOne: '',
   passwordTwo: '',
-  role: "",
+  role: "user",
+  signUpForm: "",
   error: null,
 };
 
@@ -38,7 +39,7 @@ class SignUpForm extends Component {
       username,
       email,
       passwordOne,
-      role,
+      role
     } = this.state;
 
     const {
@@ -72,7 +73,7 @@ class SignUpForm extends Component {
       email,
       passwordOne,
       passwordTwo,
-      error,
+      error
     } = this.state;
 
     const isInvalid =

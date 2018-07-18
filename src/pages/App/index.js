@@ -20,6 +20,7 @@ import HomePage from '../../components/Home';
 import AccountPage from '../../components/Account';
 import ClassManager from '../../components/ClassManager';
 import AppointmentsManager from '../../components/AppointmentsManager';
+import SignUpSurvey from '../../components/SignUpSurvey';
 import withAuthentication from '../../components/Session/withAuthentication';
 import * as routes from '../../constants/routes';
 import './index.css';
@@ -42,6 +43,7 @@ class App extends Component {
   <Route exact path="/Admin" component = {Admin} />
   <Route exact path="/ClassManager" component = {ClassManager} />
   <Route exact path="/AppointmentManager" component = {AppointmentsManager} />
+  <Route exact path="/SignUpSurvey" component = {SignUpSurvey} />
   <Route exact path={routes.LANDING} component={() => <LandingPage />} />
   <Route exact path={routes.SIGN_UP} component={() => <SignUpPage />} />
   <Route exact path={routes.SIGN_IN} component={() => <SignInPage />} />

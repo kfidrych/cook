@@ -12,6 +12,7 @@ import PasswordForgetPage from '../PasswordForget';
 import HomePage from '../Home';
 import ClassManagerPage from '../ClassManager';
 import AppointmentManagerPage from '../AppointmentManager';
+import SignUpSurveyPage from '../SignUpSurvey';
 import AccountPage from '../Account';
 import withAuthentication from '../Session/withAuthentication';
 import * as routes from '../../constants/routes';
@@ -27,6 +28,7 @@ const App = () =>
 
       <Route exact path={routes.CLASSMANAGER} component={() => <ClassManagerPage />} />
       <Route exact path={routes.APPOINTMENTMANAGER} component={() => <AppointmentManagerPage />} />
+      <Route exact path={routes.SIGNUPSURVEY} component={() => <SignUpSurveyPage />} />
       <Route exact path={routes.LANDING} component={() => <LandingPage />} />
       <Route exact path={routes.SIGN_UP} component={() => <SignUpPage />} />
       <Route exact path={routes.SIGN_IN} component={() => <SignInPage />} />
