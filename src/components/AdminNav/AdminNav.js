@@ -9,10 +9,9 @@ const AdminNav = (props) =>
             <div className="container-fluid">
                 <div id="navbar" className="navbar-collapse collapse">
                     <ul className="nav navbar-nav">
-                        <li>
-                        {/* <li className={window.location.pathname === "/userManager" ? "active" : ""}> */}
-                            User Manager
-                            {/* <Link className="userManagerLink" to="/UserManager">User Manager</Link> */}
+                        <li className={window.location.pathname === "/userManager" ? "active" : ""} >
+                            User Manager 
+                            {/* <Link className="userManagerLink">User Manager</Link> */}
                             {/* {props.children} */}
                         </li>
                         <li className={window.location.pathname === "manageAppointments" ? "active" : ""}>
