@@ -10,7 +10,7 @@ const Jumbotron = () =>
     </div>
     <div className="caption">
       <h1>Learn to Cook</h1>
-      <p>Impress all your friends</p>
+      {/* <p>Impress all your friends</p> */}
     </div>
   </div>
 

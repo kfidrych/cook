@@ -1,6 +1,7 @@
 .signout {
   color: #ffffff;
-  padding: 5px 15px;
+  padding: 3px 15px;
+  border: none;
   border: 3px solid #ffffff;
   border-radius: 15px;
   background-color: transparent;

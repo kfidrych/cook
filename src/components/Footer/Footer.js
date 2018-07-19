@@ -9,7 +9,7 @@ const Footer = () => (
          <p className={window.location.pathname === "contact" ? "active" : ""}>
 
                         <Link className="contactLink" to="/Contact">Contact Us</Link>
-                        <Link className="adminLink" to="/Admin">Administrator</Link>
+                        <Link className="adminLink" to="/admin/Admin">Administrator</Link>
                     </p>
             <span>© 2018 A Few Hungry People</span>
         </div>

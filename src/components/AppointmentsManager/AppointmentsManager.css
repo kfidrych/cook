@@ -1,3 +1,5 @@
+
+
 .table {
     font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
     border-collapse: collapse;
@@ -17,7 +19,7 @@
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: left;
-    background-color: #4CAF50;
+    background-color: #EC9770;
     color: white;
 }
 
@@ -63,7 +65,7 @@ input[type=time], select {
 
 button[type=submit] {
     width: 100%;
-    background-color: #4CAF50;
+    background-color: #EC9770;
     color: white;
     padding: 14px 20px;
     margin: 8px 0;
@@ -73,11 +75,19 @@ button[type=submit] {
 }
 
 button[type=submit]:hover {
-    background-color: #45a049;
+    background-color: #C7402D;
 }
 
 form {
     border-radius: 5px;
-    background-color: #f2f2f2;
+    background-color: #F1E4B3;
     padding: 20px;
+}
+
+table {
+    background-color: #F1E4B3;
+}
+
+h1 {
+    color: #15959F;
 }

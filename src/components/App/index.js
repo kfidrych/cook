@@ -1,8 +1,11 @@
-import React from 'react';
+import React from 'react'
 import {
   BrowserRouter as Router,
   Route,
-} from 'react-router-dom';
+  Link,
+  Redirect,
+  withRouter
+} from 'react-router-dom'
 
 import Navigation from '../Navigation';
 import LandingPage from '../Landing';

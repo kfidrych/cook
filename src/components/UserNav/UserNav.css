@@ -1,6 +1,6 @@
     .navbar-inverse {
-        background: linear-gradient(-45deg, #5399af, #64a38d, #75ac6d);
-        opacity: 0.8;
+        background: #133056;
+        opacity: 1.0;
         border-radius: 0px;
         border: 0px;
         z-index: 1;
@@ -47,6 +47,14 @@
     .navbar-inverse .navbar-nav>.active>a:hover {
         background-color: transparent;
         color: #fcf1be;
+    }
+
+    .navbar-nav>li {
+        color: #ffffff;
+        padding: 2px 10px;
+        /* border: 3px solid #ffffff;
+        border-radius: 15px; */
+        background-color: transparent;
     }
     
     .navbar-inverse .navbar-nav>li>a:focus,
@@ -112,6 +120,8 @@
     
     @media (min-width: 768px) {
         a.aboutLink:after,
+        a.userProfileLink:after,
+        a.chatbotLink:after,
         a.contactLink:after,
         a.registerLink:after,
         a.loginLink:after {
@@ -130,6 +140,8 @@
             transform: scale(0, 1);
         }
         a.aboutLink:hover:after,
+        a.userProfileLink:hover:after,
+        a.chatbotLink:hover:after,
         a.contactLink:hover:after,
         a.registerLink:hover:after,
         a.loginLink:hover:after {
