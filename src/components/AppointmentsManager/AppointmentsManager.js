@@ -102,6 +102,8 @@ class CreateAppointmentForm extends Component {
       time === '';
 
     return (
+      <div className="container">
+      <h2>Create a Class</h2>
       <form onSubmit={this.onSubmit}>
         <input
           value={date}
@@ -131,6 +133,7 @@ class CreateAppointmentForm extends Component {
           Create Appointment
         </button>
       </form>
+      </div>
     );
   }
 }

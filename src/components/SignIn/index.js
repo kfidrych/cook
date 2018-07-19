@@ -22,6 +22,7 @@ const INITIAL_STATE = {
   email: '',
   password: '',
   error: null,
+  redirectToReferrer: false
 };
 
 class SignInForm extends Component {

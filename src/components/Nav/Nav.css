@@ -1,6 +1,6 @@
     .navbar-inverse {
-      background: linear-gradient(-45deg, #5399af, #64a38d, #75ac6d);
-      opacity: 0.8;
+      background: #133046;
+      opacity: 1;
       border-radius: 0px;
       border: 0px;
       z-index: 1;
@@ -8,8 +8,8 @@
     
     nav.navbar {
       display: flex;
-      flex-direction: row;
-      justify-content: space-between;
+      /* flex-direction: row;
+      justify-content: space-between; */
     }
     
     .navbar {
@@ -20,7 +20,7 @@
       display: flex;
       flex-direction: row;
       width: 100%;
-      padding: 20px;
+      padding: 10px;
       list-style-type: none;
       flex-wrap: wrap;
       justify-content: space-around;
@@ -127,7 +127,9 @@
     
     @media (min-width: 768px) {
       a.aboutLink:after,
+      a.userProfileLink:after,
       a.contactLink:after,
+      a.chatbotLink:after,
       a.registerLink:after,
       a.loginLink:after {
         content: '';
@@ -145,7 +147,8 @@
         transform: scale(0, 1);
       }
       a.aboutLink:hover:after,
-      a.contactLink:hover:after,
+      a.userProfileLink:hover:after,
+      a.chatbotLink:hover:after,
       a.registerLink:hover:after,
       a.loginLink:hover:after {
         opacity: 1;
