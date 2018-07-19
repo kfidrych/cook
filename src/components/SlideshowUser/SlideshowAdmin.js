@@ -22,7 +22,7 @@ class Slideshow extends Component {
       <div className="slide-container">
       <Slider {...settings}>
 <div>
-<img className="img-slide" src={require("assets/img/closeup/appetizing-beef-black-background-533352.jpg)}" alt="cook"/> 
+<img className="img-slide" src="assets/img/closeup/appetizing-beef-black-background-533352.jpg" alt="cook"/> 
   </div>
 <div>
 <img className="img-slide" src="../assets/img/closeup/aroma-aromatic-assortment-531446.jpg" alt="cook"/> 
