@@ -13,12 +13,12 @@ class Home extends Component {
   render() {
     return (
       <Container fluid>
-      <Row>
-          <Slideshow />
-          </Row>
                 <Row>
                     <Jumbotron />
                 </Row>
+      <Row>
+          <Slideshow />
+          </Row>
                 <Row>
                     <Col size="md-12">
                     <div className="col-sm-12 getStarted">

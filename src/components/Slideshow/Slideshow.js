@@ -6,10 +6,10 @@ class Slideshow extends Component {
   render() {
     var settings = {
       infinite: true,
-      speed: 500,
+      speed: 2500,
       accessibility: true,
       autoplay: true,
-      autoplaySpeed: 2000,
+      autoplaySpeed: 5500,
       adaptiveHeight: true,
       centerMode: true,
       centerPadding: "0px",
@@ -19,6 +19,7 @@ class Slideshow extends Component {
     };
 
     return (
+      <div className="slide-container">
       <Slider {...settings}>
 <div>
 <img className="img-slide" src="assets/img/slide/agriculture-blur-close-up-33783.jpg" alt="cook"/> 
@@ -45,6 +46,8 @@ class Slideshow extends Component {
 <img className="img-slide" src="assets/img/slide/crust-delicious-dinner-568370.jpg" alt="cook"/> 
   </div>
 </Slider>
+<div class="slide-centered">Using his skills from years of experience, Chef Boyer will be able to provide you with an education that takes your cooking to where you want it to be—from the comfort of your home kitchen!</div>
+  </div>
     )
   };
 }
