@@ -16,7 +16,7 @@
     /* Logo */
     
     img.logoImg {
-        width: 12%;
+        width: 30%;
         height: auto;
     }
     
@@ -32,6 +32,7 @@
     a.logo:hover {
         text-decoration: none;
         color: #ffffff;
+        height: 20px;
     }
     /* */
     
@@ -80,14 +81,14 @@
     
     @media (min-width: 320px) and (max-width: 460px) {
         img.logoImg {
-            width: 30%;
+            width: 12%;
             height: auto;
         }
     }
     
     @media (min-width: 460px) and (max-width: 768px) {
         img.logoImg {
-            width: 20%;
+            width: 12%;
             height: auto;
         }
     }
@@ -97,7 +98,7 @@
             margin-top: -50px;
         }
         img.logoImg {
-            width: 16%;
+            width: 12%;
             height: auto;
         }
     }
@@ -118,7 +119,7 @@
         }
     }
     
-    @media (min-width: 768px) {
+    /* @media (min-width: 768px) {
         a.aboutLink:after,
         a.userProfileLink:after,
         a.chatbotLink:after,
@@ -130,7 +131,7 @@
             left: 0;
             display: inline-block;
             height: 1em;
-            width: 100%;
+            width: 50%;
             border-bottom: 3px solid;
             margin-top: 10px;
             opacity: 0;
@@ -149,7 +150,7 @@
             -webkit-transform: scale(0.75);
             transform: scale(0.75);
         }
-    }
+    } */
     /* DROPDOWN MENU */
     /* Dropdown Button */
     
