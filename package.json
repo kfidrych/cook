@@ -34,6 +34,7 @@
     "react-redux-firebase": "^2.1.6",
     "react-router-dom": "^4.2.2",
     "react-scripts": "1.1.4",
+    "react-slick": "^0.23.1",
     "react-tap-event-plugin": "^3.0.3",
     "reactstrap": "^6.3.0",
     "redux": "^4.0.0",
@@ -51,7 +52,8 @@
     "eject": "react-scripts eject"
   },
   "author": "Katie Wang <ktwang16@mac.com (https://github.com/KTWangster)",
-  "contributors": [{
+  "contributors": [
+    {
       "name": "Julian Skodzinski",
       "url": "https://github.com/juliantsk"
     },

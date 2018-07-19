@@ -31,7 +31,7 @@ import SignUpSurvey from '../../components/SignUpSurvey';
 import withAuthentication from '../../components/Session/withAuthentication';
 import * as routes from '../../constants/routes';
 import './index.css';
-import {auth, db} from '../../firebase';
+import { auth, db } from '../../firebase';
 
 const user = auth.currentUser;
 console.log(user.role);
@@ -103,37 +103,6 @@ class App extends Component {
   render() {
     return (
       <Router>
-<<<<<<< HEAD
-  <div>
-    <Nav authUser={this.state.authUser} />
-<Switch>
-  <Route exact path="/" component={Home} />
-  <Route exact path="/About" component={About} />
-  <Route exact path="/Contact" component={Contact} />
-  <Route exact path="/Login" component={Login} />
-  <Route exact path="/Alacarte" component={Alacarte} />
-  <Route exact path="/ClassPkgs" component={ClassPkgs} />
-  <Route exact path="/Chatbot" component = {Chatbot} />
-  <Route exact path="/UserProfile" component = {UserProfile} />
-  <Route exact path="/admin/Admin" component = {Admin} />
-  <Route exact path="/admin/ClassManager" component = {ClassManager} />
-  <Route exact path="/admin/AppointmentManager" component = {AppointmentsManager} />
-  <Route exact path="/SignUpSurvey" component = {SignUpSurvey} />
-  <Route exact path="/admin/UserManager" component = {UserManager} />
-  <Route exact path={routes.LANDING} component={() => <LandingPage />} />
-  <Route exact path={routes.SIGN_UP} component={() => <SignUpPage />} />
-  <Route exact path={routes.SIGN_IN} component={() => <SignInPage />} />
-  <Route exact path={routes.PASSWORD_FORGET} component={() => <PasswordForgetPage />} />
-  <Route exact path={routes.HOME} component={() => <HomePage />} />
-  <Route exact path={routes.ACCOUNT} component={() => <AccountPage />} />
-  <Route exact path={routes.CLASSMANAGER} component={() => <ClassManager />} />
-  <Route exact path={routes.APPOINTMENTMANAGER} component={() => <AppointmentsManager />} />
-  <Route component={Home} />
-</Switch>
-<Footer />
-  </div>
-  </Router>
-=======
         {/* <div>
           <ul>
             <li><Link to="/admin/ClassManager">Public Page</Link></li>
@@ -175,7 +144,6 @@ class App extends Component {
           <Footer />
         </div>
       </Router>
->>>>>>> c0a9ffefaf4ef8825b1a1dc7e4b4236ee87ecaaa
     )
   }
 }
