@@ -13,3 +13,15 @@ h1 {
   margin: 0;
   padding: 10px 0;
 }
+
+.img-slide {
+  display: flex;
+  width: 100%;
+  height: auto;
+  margin: auto;
+  flex-direction: row;
+}
+
+div>.slick-arrow {
+  display: none
+}
