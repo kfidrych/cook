@@ -24,14 +24,15 @@ const NavigationAuth = () =>
 
     <div id="navbar" className="navbar-collapse collapse">
         <ul className="nav navbar-nav">
+            <li className={window.location.pathname === "/home" ? "active" : ""}>
+                <Link className="userProfileLink" to="/UserProfile">Home</Link>
+            </li>
             <li className={window.location.pathname === "/about" ? "active" : ""}>
                 <Link className="aboutLink" to="/About">About</Link>
             </li>
-            <li className={window.location.pathname === "/about" ? "active" : ""}>
-            <Link className="userProfileLink" to="/UserProfile">Home</Link>
-            </li>
-            <li className={window.location.pathname === "chatbot" ? "active" : ""}>
-                <Link className="ChatbotLink" to="/Chatbot">Chat With Us!</Link>
+            
+            <li className={window.location.pathname === "/chatbot" ? "active" : ""}>
+                <Link className="chatbotLink" to="/Chatbot">Chat With Us!</Link>
             </li>
     <li><SignOutButton /></li>
         </ul>

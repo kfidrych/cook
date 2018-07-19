@@ -1,7 +1,7 @@
 .card {
   display: flex;
-  flex-direction: column;
-  background: #fff;
+  flex-direction: row;
+  background: #EC9770;
   border-radius: 20px;
   height: 325px;
   margin: 1rem;
@@ -10,13 +10,18 @@
   text-align: left;
 }
 
+#payPalForm {
+  width: 170px;
+  height: 75px;
+  margin-top: 10px;
+}
+
 .card>.img-container {
   height: 60%;
   overflow: hidden;
   text-align: center;
-  background: linear-gradient(-45deg, #5399af, #64a38d, #75ac6d);
   border-radius: 20px 20px 0 0;
-  opacity: 0.7;
+  opacity: .8;
 }
 
 .card>.img-container>img {
@@ -25,7 +30,12 @@
 
 .card>.content {
   padding-right: 1rem;
-  font-size: 15px;
+  font-size: 14px;
+}
+
+.card>.content>p {
+  font-size: 17px;
+  padding-left: 5%; 
 }
 
 .card>.img-container:hover {

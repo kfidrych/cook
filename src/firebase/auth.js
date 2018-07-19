@@ -22,3 +22,6 @@ export const doPasswordUpdate = (password) =>
 
 export const onAuthStateChanged = (user) =>
   auth.onAuthStateChanged(user);
+
+export const currentUser = () =>
+  auth.currentUser;
