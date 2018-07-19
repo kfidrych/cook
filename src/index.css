@@ -3,3 +3,9 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
+@media (min-width: 300px) and (max-width: 460px) {
+  body {
+    margin: 145px 0px 0px 0px;
+  }
+}
