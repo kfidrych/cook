@@ -4,24 +4,24 @@ import { LogText, UserInput } from "../../components/UserLog";
 import "./Contact.css";
 
 class Contact extends Component {
-// Setes component's initial state.
-state = {
+  // Setes component's initial state.
+  state = {
     name: "",
     email: "",
     comment: ""
-};
+  };
 
-// Updates component state when user types into input field.
-handleInputChange = event => {
+  // Updates component state when user types into input field.
+  handleInputChange = event => {
     const { name, value } = event.target;
     this.setState({
-        [name]: value
+      [name]: value
     });
-};
+  };
 
-    render() {
-        return (
-            <div>
+  render() {
+    return (
+      <div>
                 <Container>
                     <Row>
                     <div className="col-sm-5 contactLeft">
@@ -36,6 +36,7 @@ handleInputChange = event => {
                             <div className="col-sm-6">
 
                                 <UserInput
+                                className="contact-input"
                                     name="name"
                                     placeholder="Name"
                                 />
@@ -43,6 +44,7 @@ handleInputChange = event => {
                             <div className="col-sm-6">
 
                                 <UserInput
+                                className="contact-input"
                                     name="email"
                                     placeholder="Email"
                                 />
@@ -53,6 +55,7 @@ handleInputChange = event => {
                             <div className="col-sm-12">
 
                                 <LogText
+                                className="contact-input"
                                     name="comment"
                                     placeholder="Comment"
                                 />
@@ -64,8 +67,8 @@ handleInputChange = event => {
                     </Row>
                 </Container>
             </div>
-        )
-    }
+    )
+  }
 }
 
 export default Contact;

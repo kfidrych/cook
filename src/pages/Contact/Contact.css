@@ -10,21 +10,24 @@
   justify-content: center;
 }
 
-.contactLeft>h2 {
-  text-align: left!important;
+.contact-input {
+  height: initial;
+  border: 1px solid black;
+  border-image-source: none;
+  color: black;
+  margin: 10px auto;
 }
 
 .contactLeft>h4 {
-  text-align: left!important;
   font-weight: 350;
-  line-height: 20px;
+  line-height: 1px;
   font-size: 18px;
 }
 
 .contactLeft>hr {
   border-top: 1.5px solid #5399af;
   width: 50px;
-  margin: 30px 0;
+  margin: 30px auto;
 }
 
 .contactIcon {
@@ -42,7 +45,7 @@
   border: 2px solid #5399af;
   border-image-source: linear-gradient(45deg, -45deg, #5399af, #64a38d, #75ac6d);
   border-image-slice: 2;
-  border-radius: 30px;
+  border-radius: 20px;
   background-color: #fefbf0;
   color: #5399af;
   margin: 25px auto;
@@ -66,5 +69,8 @@
   }
   input.inputLog {
     margin-top: 40px;
+  }
+  .contactLeft>h2 {
+    padding-top: 20vmax;
   }
 }
