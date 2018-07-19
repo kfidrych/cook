@@ -1,25 +1,26 @@
 .selectClass>h2 {
-    text-align: center;
-    text-transform: uppercase;
-    font-size: 25px;
-    background-color: #133046;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-weight: bold;
-    letter-spacing: 0.05em;
-    margin-top: 50px;
-    color: #133046;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 25px;
+  background-color: #133046;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+  margin-top: 50px;
+  color: #133046;
 }
 
 .line {
-    border-top: 3px solid #5399af;
-    opacity: 0.7;
-    width: 300px;
-    margin: 30px auto;
+  border-top: 3px solid #5399af;
+  opacity: 0.7;
+  width: 300px;
+  margin: 30px auto;
 }
 
-#menuCardDev {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+#menuCardDiv {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
 }
