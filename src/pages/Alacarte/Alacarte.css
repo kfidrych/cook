@@ -16,3 +16,9 @@ h2 {
     width: 300px;
     margin: 30px auto;
 }
+
+#menuCardDev {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
