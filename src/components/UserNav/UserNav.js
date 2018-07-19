@@ -10,9 +10,9 @@ const UserNav = () =>
                     <li className={window.location.pathname === "/classes" ? "active" : ""}>
                         <Link className="classesLink" to="/">Browse Classes</Link>
                     </li>
-                    <li className={window.location.pathname === "/about" ? "active" : ""}>
+                    {/* <li className={window.location.pathname === "/about" ? "active" : ""}>
                         <Link className="UpcomingCLasses" to="/">Upcoming Classes</Link>
-                    </li>
+                    </li> */}
                     <li className={window.location.pathname === "/signUpSurvey" ? "active" : ""}>
                         <Link className="surveyLink" to="/SignUpSurvey">Update Info</Link>
                     </li>
