@@ -7,27 +7,17 @@ const UserNav = () =>
         <div className="container-fluid">
             <div id="navbar" className="navbar-collapse collapse">
                 <ul className="nav navbar-nav">
-                    <li className={window.location.pathname === "/about" ? "active" : ""}>
-                        <Link className="UpcomingClasses" to="/UpcomingClasses">Upcoming Classes</Link>
+                    <li className={window.location.pathname === "/classes" ? "active" : ""}>
+                        <Link className="classesLink" to="/">Browse Classes</Link>
                     </li>
-                    <li className={window.location.pathname === "signUp" ? "active" : ""}>
-                        <Link className="signUpLink" to="/SignUp">Register</Link>
+                    <li className={window.location.pathname === "/about" ? "active" : ""}>
+                        <Link className="UpcomingClasses" to="/">Upcoming Classes</Link>
+                    </li>
+                    <li className={window.location.pathname === "/signUpSurvey" ? "active" : ""}>
+                        <Link className="surveyLink" to="/SignUpSurvey">Update Info</Link>
                     </li>
                 </ul>
             </div>
-
-            <div className="dropdown">
-                <button className="dropbtn">Classes</button>
-                <div class="dropdown-content">
-            <a className={window.location.pathname === "/alacarte" ? "active" : ""}>
-                <Link className="alacarteLink" to="/Alacarte">A la Carte</Link>
-            </a>
-            <a className={window.location.pathname === "/classpkgs" ? "active" : ""}>
-                <Link className="classpkgsLink" to="/ClassPkgs">Class Packages</Link>
-            </a>
-     </div>
-
-</div>
         </div>
     </nav>
 

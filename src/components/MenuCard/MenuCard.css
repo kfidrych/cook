@@ -8,6 +8,7 @@
   position: relative;
   width: 325px;
   text-align: left;
+  /* color: white; */
 }
 
 #payPalForm {
@@ -28,14 +29,16 @@
   width: 60%
 }
 
-.card>.content {
+.card>.content>h1 {
   padding-right: 1rem;
-  font-size: 14px;
+  font-size: 30px;
+  color: #C7402D;
 }
 
 .card>.content>p {
   font-size: 17px;
   padding-left: 5%; 
+  color: white;
 }
 
 .card>.img-container:hover {

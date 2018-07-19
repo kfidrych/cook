@@ -22,7 +22,7 @@ class Home extends Component {
                 <Row>
                     <Col size="md-12">
                     <div className="col-sm-12 getStarted">
-                    <h2>Browse Cooking Classes</h2>
+                    <h2 id="browseTitle">Browse Cooking Classes</h2>
                                 <hr className="line" />
                                 <div className="buttons">
                                 <div className="col-sm-4">

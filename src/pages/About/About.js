@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Row, Container } from "../../components/Grid";
+import "./About.css";
 
 class About extends Component {
   render() {
@@ -9,7 +10,18 @@ class About extends Component {
                     <Row>
                     <div className="col-md-12 containerBox inputBox">
                         <div className="col-lg-3">
-                            <h1>Mister Chef</h1>
+                            <h1>Why use Cooky?</h1>
+                        </div>
+                        <div className="col-lg-8 ">
+                            <p className="aboutText">
+                            Cooky allows for aspiring and amateur chef's and cooks to find, purchase, and schedule cooking classes with an experienced Professional Chef from the comfort of your own home!
+                            </p>
+                            <p className="aboutText">
+                            It's easy to sign up and start learning how to prepare some of your favorite dishes and cuisines! After completing a survey about your experience, interests, and materials available the Chef is then able to best customize each course to your specific needs.
+                            </p>
+                        </div>
+                        <div className="col-lg-3">
+                            <h1>Meet the Chef!</h1>
                         </div>
                         <div className="col-lg-8 ">
                             <p className="aboutText">

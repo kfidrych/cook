@@ -1,4 +1,4 @@
-h2 {
+.selectClass>h2 {
     text-align: center;
     text-transform: uppercase;
     font-size: 25px;
@@ -8,6 +8,7 @@ h2 {
     font-weight: bold;
     letter-spacing: 0.05em;
     margin-top: 50px;
+    color: #133046;
 }
 
 .line {

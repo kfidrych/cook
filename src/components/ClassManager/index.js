@@ -104,6 +104,8 @@ class CreateClassForm extends Component {
       description === '';
 
     return (
+      <div className="container">
+      <h2 id="createClassTitle">Create a Class</h2>
       <form onSubmit={this.onSubmit}>
         <input
           value={title}
@@ -132,6 +134,7 @@ class CreateClassForm extends Component {
           Create Class
         </button>
       </form>
+      </div>
     );
   }
 }

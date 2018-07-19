@@ -79,7 +79,7 @@ class SignInForm extends Component {
           type="password"
           placeholder="Password"
         />
-        <button disabled={isInvalid} type="submit">
+        <button disabled={isInvalid} path="/UserProfile" type="submit">
           Sign In
         </button>
 

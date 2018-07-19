@@ -1,0 +1,15 @@
+#surveyForm {
+    display: flex;
+    justify-content: center;
+    text-align: left;
+    flex-direction: column;
+    width: 60%;
+    margin-top: 10px;
+    color: #C74029;
+    /* align-items: center; */
+}
+
+form>.surveyInput {
+    align-self: center;
+    width: 90%;
+}
