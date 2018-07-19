@@ -33,8 +33,8 @@ const NavigationAuth = () =>
                 <Link className="aboutLink" to="/About">About</Link>
             </li>
             
-            <li className={window.location.pathname === "/chatbot" ? "active" : ""}>
-                <Link className="chatbotLink" to="/Chatbot">Chat With Us!</Link>
+            <li className={window.location.pathname === "/contact" ? "active" : ""}>
+                <Link className="chatbotLink" to="/Contact">Chat With Us!</Link>
             </li>
     <li><SignOutButton /></li>
         </ul>
