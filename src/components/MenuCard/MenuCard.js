@@ -43,6 +43,8 @@ class MenuCard extends Component {
 <input type="hidden" name="return" value="https://desolate-castle-96401.herokuapp.com/" />
 <input type="hidden" name="cancel_return" value="https://desolate-castle-96401.herokuapp.com/" />
 <input type="hidden" name="bn" value="PP-BuyNowBF:btn_buynow_LG.gif:NonHosted" />
+<input type="hidden" name="custom" value="[UserID],[PartNumber]"/>
+
 <table>
 <tr><td><input type="hidden" name="on0" value="Available Appointments" />Available Appointments</td></tr><tr><td><select name="os0">
   {Object.keys(appointments).map(key =>

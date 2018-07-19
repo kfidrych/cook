@@ -54,6 +54,9 @@ export const onceGetAppointments = () =>
 export const onceGetUsers = () =>
   db.ref('users').once('value');
 
+export const onceGetUserRole = (key) =>
+  db.ref(`users/${key}/role`).once('value');
+
 export const doDeleteClass = (key) =>
   db.ref('classes').child(key).remove();
 

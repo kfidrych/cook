@@ -45,14 +45,13 @@
     "firebase": "^5.2.0"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "react-scripts start && node paypal.js",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
   "author": "Katie Wang <ktwang16@mac.com (https://github.com/KTWangster)",
-  "contributors": [
-    {
+  "contributors": [{
       "name": "Julian Skodzinski",
       "url": "https://github.com/juliantsk"
     },

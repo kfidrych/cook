@@ -27,11 +27,18 @@ import * as routes from '../../constants/routes';
 import './index.css';
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      authUser: null,
+    };
+  }
   render() {
     return (
       <Router>
   <div>
-    <Nav />
+    <Nav authUser={this.state.authUser} />
 <Switch>
   <Route exact path="/" component={Home} />
   <Route exact path="/About" component={About} />
