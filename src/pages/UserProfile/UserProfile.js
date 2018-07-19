@@ -19,11 +19,11 @@ class UserProfile extends Component {
   render() {
     return (
       <div>
-             <UserNav /> 
-             <Switch>
-  <Route exact path="/UpcomingClasses" component={UpcomingClasses} />
-</Switch>
-</div>
+        <UserNav /> 
+        <Switch>
+          <Route exact path="/UpcomingClasses" component={UpcomingClasses} />
+        </Switch>
+      </div>
     )
   }
 }

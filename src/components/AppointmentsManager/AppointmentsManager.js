@@ -103,7 +103,7 @@ class CreateAppointmentForm extends Component {
 
     return (
       <div className="container">
-      <h2>Create a Class</h2>
+      <h2 id="createAppointmentTitle">Create an Appointment</h2>
       <form onSubmit={this.onSubmit}>
         <input
           value={date}

@@ -7,6 +7,7 @@ import {
 import { auth, db } from '../../firebase';
 import * as routes from '../../constants/routes';
 import './SignUpSurvey.css';
+import UserNav from "../../components/UserNav";
 
 auth.onAuthStateChanged(function(user) {
   if (user) {
@@ -19,6 +20,7 @@ auth.onAuthStateChanged(function(user) {
 
 const SignUpSurveyPage = ({ history }) =>
   <div>
+    <UserNav />
     <h1>Tell us a little more about yourself!</h1>
     <SignUpSurvey history={history} />
   </div>
@@ -163,9 +165,10 @@ class SignUpSurvey extends Component {
       Q16 === '';
 
     return (
-      <form onSubmit={this.onSubmit}>
+      <form id="surveyForm" onSubmit={this.onSubmit}>
                 <label for="Q1">How many years have you been cooking?</label>
                 <input
+                    className="surveyInput"
                     value={Q1}
                     onChange={event => this.setState(updateByPropertyName('Q1', event.target.value))}
                     type="number"
@@ -173,6 +176,7 @@ class SignUpSurvey extends Component {
                 />
                 <label for="Q2">When did you first start cooking, and who was your first teacher and/or role model?</label>
                 <input
+                    className="surveyInput"
                     value={Q2}
                     onChange={event => this.setState(updateByPropertyName('Q2', event.target.value))}
                     type="text"
@@ -180,6 +184,7 @@ class SignUpSurvey extends Component {
                 />
                 <label for="Q3">Do you enjoy cooking? Why?</label>
                 <input
+                    className="surveyInput"
                     value={Q3}
                     onChange={event => this.setState(updateByPropertyName('Q3', event.target.value))}
                     type="text"
@@ -187,6 +192,7 @@ class SignUpSurvey extends Component {
                 />
                 <label for="Q4">What are your favorite dishes to make?</label>
                 <input
+                    className="surveyInput"
                     value={Q4}
                     onChange={event => this.setState(updateByPropertyName('Q4', event.target.value))}
                     type="text"
@@ -194,6 +200,7 @@ class SignUpSurvey extends Component {
                 />
                 <label for="Q5">What are your favorite styles of cooking?</label>
                 <input
+                    className="surveyInput"
                     value={Q5}
                     onChange={event => this.setState(updateByPropertyName('Q5', event.target.value))}
                     type="text"
@@ -201,6 +208,7 @@ class SignUpSurvey extends Component {
                 />
                 <label for="Q6">What is your best dish?</label>
                 <input
+                    className="surveyInput"
                     value={Q6}
                     onChange={event => this.setState(updateByPropertyName('Q6', event.target.value))}
                     type="text"
@@ -208,6 +216,7 @@ class SignUpSurvey extends Component {
                 />
                 <label for="Q7">What styles of cooking are you most proficient in?</label>
                 <input
+                    className="surveyInput"
                     value={Q7}
                     onChange={event => this.setState(updateByPropertyName('Q7', event.target.value))}
                     type="text"
@@ -215,6 +224,7 @@ class SignUpSurvey extends Component {
                 />
                 <label for="Q8">What equipment do you currently have in your kitchen?</label>
                 <input
+                    className="surveyInput"
                     value={Q8}
                     onChange={event => this.setState(updateByPropertyName('Q8', event.target.value))}
                     type="text"
@@ -222,6 +232,7 @@ class SignUpSurvey extends Component {
                 />
                 <label for="Q9">How many people do you normally cook for?</label>
                 <input
+                    className="surveyInput"
                     value={Q9}
                     onChange={event => this.setState(updateByPropertyName('Q9', event.target.value))}
                     type="text"
@@ -229,6 +240,7 @@ class SignUpSurvey extends Component {
                 />
                 <label for="Q10">What styles of cooking would you like to get better in?</label>
                 <input
+                    className="surveyInput"
                     value={Q10}
                     onChange={event => this.setState(updateByPropertyName('Q10', event.target.value))}
                     type="text"
@@ -236,6 +248,7 @@ class SignUpSurvey extends Component {
                 />
                  <label for="Q11">What is the largest number of people would you ideally be able to cook for? (2-4, 4-8, 8+)</label>
                 <input
+                    className="surveyInput"
                     value={Q11}
                     onChange={event => this.setState(updateByPropertyName('Q11', event.target.value))}
                     type="text"
@@ -243,6 +256,7 @@ class SignUpSurvey extends Component {
                 />
                  <label for="Q12">What are some specific skills that you would like to improve?</label>
                 <input
+                    className="surveyInput"
                     value={Q12}
                     onChange={event => this.setState(updateByPropertyName('Q12', event.target.value))}
                     type="text"
@@ -250,6 +264,7 @@ class SignUpSurvey extends Component {
                 />
                  <label for="Q13">Would you like to spend more time making more complex dishes or even less time making simple, down-to-earth meals?</label>
                 <input
+                    className="surveyInput"
                     value={Q13}
                     onChange={event => this.setState(updateByPropertyName('Q13', event.target.value))}
                     type="text"
@@ -257,6 +272,7 @@ class SignUpSurvey extends Component {
                 />
                  <label for="Q14">Are you open to purchasing new kitchen equipment (utensils, counter top appliances, etc)?</label>
                 <input
+                    className="surveyInput"
                     value={Q14}
                     onChange={event => this.setState(updateByPropertyName('Q14', event.target.value))}
                     type="text"
@@ -264,6 +280,7 @@ class SignUpSurvey extends Component {
                 />
                  <label for="Q15">Roughly how much counter space do you have in your kitchen?</label>
                 <input
+                    className="surveyInput"
                     value={Q15}
                     onChange={event => this.setState(updateByPropertyName('Q15', event.target.value))}
                     type="text"
@@ -271,6 +288,7 @@ class SignUpSurvey extends Component {
                 />
                  <label for="Q16">Are there any specific dishes or meals that you've always dreamed of making, but never attempted or been able to accomplish?</label>
                 <input
+                    className="surveyInput"
                     value={Q16}
                     onChange={event => this.setState(updateByPropertyName('Q16', event.target.value))}
                     type="text"
