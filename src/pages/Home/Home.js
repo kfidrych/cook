@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Jumbotron from "../../components/Jumbotron";
 import { Col, Row, Container } from "../../components/Grid";
-import Chatbot from "../../components/Chatbot";
+import Slideshow from "../../components/Slideshow";
 import "./Home.css"
 
 class Home extends Component {
@@ -13,6 +13,9 @@ class Home extends Component {
   render() {
     return (
       <Container fluid>
+      <Row>
+          <Slideshow />
+          </Row>
                 <Row>
                     <Jumbotron />
                 </Row>

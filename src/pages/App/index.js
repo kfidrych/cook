@@ -31,7 +31,7 @@ import SignUpSurvey from '../../components/SignUpSurvey';
 import withAuthentication from '../../components/Session/withAuthentication';
 import * as routes from '../../constants/routes';
 import './index.css';
-import {auth, db} from '../../firebase';
+import { auth, db } from '../../firebase';
 
 const user = auth.currentUser;
 console.log(user.role);
@@ -93,6 +93,13 @@ console.log(user.role);
 // }
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      authUser: null,
+    };
+  }
   render() {
     return (
       <Router>

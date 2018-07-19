@@ -1,0 +1,15 @@
+.jumbotron {
+  background: #15959F;
+  width: 100%;
+  color: #ffffff;
+  margin: 0;
+}
+
+.jumbotron>.caption>h1 {
+  color: #ffffff;
+}
+
+h1 {
+  margin: 0;
+  padding: 10px 0;
+}
