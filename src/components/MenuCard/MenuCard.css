@@ -1,4 +1,4 @@
-.card {
+/* .card {
   display: flex;
   flex-direction: row;
   background: #EC9770;
@@ -8,7 +8,6 @@
   position: relative;
   width: 325px;
   text-align: left;
-  /* color: white; */
 }
 
 #payPalForm {
@@ -43,4 +42,4 @@
 
 .card>.img-container:hover {
   opacity: 1.0;
-}
+} */
