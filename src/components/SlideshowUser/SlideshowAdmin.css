@@ -1,0 +1,44 @@
+.jumbotron {
+  background: #15959F;
+  width: 100%;
+  color: #ffffff;
+  margin: 0;
+}
+
+.jumbotron>.caption>h1 {
+  color: #ffffff;
+}
+
+h1 {
+  margin: 0;
+  padding: 10px 0;
+}
+
+.img-slide {
+  display: flex;
+  width: 100%;
+  height: auto;
+  margin: auto;
+  flex-direction: row;
+}
+
+div>.slick-arrow {
+  display: none
+}
+
+.slide-container {
+  position: relative;
+  text-align: center;
+}
+
+.slide-centered {
+  font-size: 3.5vw;
+  color: lightgrey;
+  background-color: rgba(199, 64, 45, .5);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 3.5vw;
+  border-radius: 10px;
+}

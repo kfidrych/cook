@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Col, Row, Container } from "../../components/Grid";
 import UserNav from "../../components/UserNav";
+import SlideshowUser from "../../components/SlideshowUser";
 import UpcomingClasses from "../UpcomingClasses";
 import withAuthorization from '../../components/Session/withAuthorization';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
@@ -20,6 +21,7 @@ class UserProfile extends Component {
     return (
       <div>
         <UserNav /> 
+        <SlideshowUser />
         <Switch>
           <Route exact path="/UpcomingClasses" component={UpcomingClasses} />
         </Switch>
