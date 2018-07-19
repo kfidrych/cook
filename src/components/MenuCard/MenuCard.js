@@ -21,9 +21,9 @@ class MenuCard extends Component {
     const { appointments } = this.state;
     return (
       <div className="card">
-      <div className="img-container">
+      {/* <div className="img-container">
         <img alt={this.props.title} src={this.props.imageSrc} />
-      </div>
+      </div> */}
       <div className="content">
       <h1>{this.props.title}</h1>
       <p>{this.props.description}</p>
