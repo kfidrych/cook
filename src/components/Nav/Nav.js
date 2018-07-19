@@ -13,8 +13,10 @@ const Nav = () =>
     }
   </AuthUserContext.Consumer>
 
+
+
 const NavigationAuth = () =>
-  <nav className="navbar navbar-inverse navbar-fixed-top">
+  <nav className="navbar navbar-inverse navbar-fixed-top sticky">
 <div className="container-fluid">
     <div className="navbar-header">
     <p id="logo" className={window.location.pathname === "/" ? "active" : ""}>
@@ -41,7 +43,7 @@ const NavigationAuth = () =>
 </nav>
 
 const NavigationNonAuth = () =>
-  <nav className="navbar navbar-inverse navbar-fixed-top">
+  <nav className="navbar navbar-inverse navbar-fixed-top sticky">
 <div className="container-fluid">
     <div className="navbar-header">
     <p id="logo" className={window.location.pathname === "/" ? "active" : ""}>

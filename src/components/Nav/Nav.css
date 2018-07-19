@@ -3,7 +3,7 @@
       opacity: 1;
       border-radius: 0px;
       border: 0px;
-      z-index: 1;
+      /* z-index: 1; */
     }
     
     nav.navbar {
@@ -14,6 +14,13 @@
     
     .navbar {
       margin-bottom: 0px!important;
+    }
+
+    .sticky {
+      position: fixed;
+      top: 0;
+      width: 100%;
+
     }
     
     .navbar-nav {
